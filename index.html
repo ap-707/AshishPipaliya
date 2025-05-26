@@ -166,6 +166,18 @@
                 <button class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-semibold hover:bg-gray-300 transition" data-filter="automation">Automation</button>
             </div>
             <div class="project-grid">
+                    <!-- Modal -->
+                    <div id="projectModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="bg-white rounded-xl p-6 w-11/12 max-w-2xl relative">
+                        <!-- Close button -->
+                        <button id="closeModal" class="absolute top-2 right-4 text-2xl font-bold text-gray-600 hover:text-red-500">&times;</button>
+
+                        <!-- Modal content dynamically injected -->
+                        <div id="modalContent">
+                        <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    </div>
                 <!-- Projects will be dynamically added here -->
             </div>
         </div>
@@ -236,7 +248,7 @@
                 {"name": "Tableau", "icon": "https://img.icons8.com/ios-filled/48/000000/tableau-software.png"},
                 {"name": "MS Office", "icon": "https://img.icons8.com/?size=100&id=117062&format=png&color=1A1A1A"},
                 {"name": "Looker Studio", "icon": "https://img.icons8.com/ios-filled/48/000000/dashboard.png"},
-                {"name": "Power Automate", "icon": "https://img.icons8.com/?size=96&id=kTTt25v6Drpd&format=png"},
+                {"name": "Power Automate", "icon": "https://static-00.iconduck.com/assets.00/power-automate-icon-144x119-0z97x2m7.png"},
                 {"name": "Google Analytics", "icon": "https://img.icons8.com/?size=128&id=ZSt7LSFvNpZG&format=png"},
                 {"name": "Google BigQuery", "icon": "https://img.icons8.com/ios-filled/48/000000/database.png"}
             ]
@@ -255,6 +267,8 @@
         ],
         "projects": [
             {
+            "main_image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg",
+            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg",
             "title": "Diamond Price Prediction",
             "year": 2024,
             "category": "data",
@@ -264,6 +278,8 @@
             "hasUpload": true
             },
             {
+            "main_image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
+            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
             "title": "Web Browser Extensions",
             "year": 2024,
             "category": "automation",
@@ -273,6 +289,8 @@
             "hasUpload": false
             },
             {
+            "main_image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
+            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
             "title": "Scraping and Automation",
             "year": 2024,
             "category": "automation",
@@ -282,6 +300,8 @@
             "hasUpload": false
             },
             {
+            "main_image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
+            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
             "title": "Twitter Sentiment Analysis",
             "year": 2023,
             "category": "data",
@@ -291,6 +311,8 @@
             "hasUpload": false
             },
             {
+            "main_image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
+            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
             "title": "Uber Ride Predictive Modelling",
             "year": 2023,
             "category": "data",
@@ -300,6 +322,8 @@
             "hasUpload": false
             },
             {
+            "main_image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-startup-stock-photos-7376.jpg",
+            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-startup-stock-photos-7376.jpg",
             "title": "Complaint Cube",
             "year": 2022,
             "category": "mobile",
@@ -348,7 +372,10 @@
         });
 
         // Skill Filter
-
+        function toggleDetails(index) {
+            const detailSection = document.getElementById(`details-${index}`);
+            detailSection.classList.toggle('hidden');
+        }
         // Function to generate HTML elements for skills
         function generateSkillsHTML(skills) {
         return skills.map(skill => {
@@ -362,33 +389,70 @@
             }).join("");
         }).join("");
         }
+
         // Generate HTML elements for skills and add them to the skill-grid
         const skillsHTML = generateSkillsHTML(data.skills);
         document.querySelector('.skill-grid').innerHTML = skillsHTML;
 
 // ======================================================================================
 
+        
+       function generateProjectsHTML(projects) {
+            const container = document.querySelector(".project-grid");
 
-        // Function to generate HTML elements for projects
-        function generateProjectsHTML(projects) {
-            return projects.map(project => {
-                return `
-                    <a class="project-card bg-white p-6 rounded-xl shadow-md" data-category="${project.category}">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">${project.title} (${project.year})</h3>
-                        <p class="text-gray-600 mb-2"><strong>Purpose:</strong> ${project.purpose}</p>
-                        <p class="text-gray-600 mb-2"><strong>Technologies:</strong> ${project.technologies}</p>
-                        <p class="text-gray-600 mb-4"><strong>About:</strong> ${project.description}</p>
-                    </a>
+            // Clear previous content except modal
+            container.innerHTML = container.querySelector("#projectModal").outerHTML;
+
+            // Append new cards
+            projects.forEach((project, index) => {
+                const card = document.createElement("a");
+                card.className = "project-card bg-white p-6 rounded-xl shadow-md cursor-pointer";
+                card.setAttribute("data-category", project.category);
+                card.setAttribute("data-index", index);
+
+                card.innerHTML = `
+                    <img src="${project.image}" alt="${project.title} image" class="rounded-lg mb-1" />
+                    <h3 class="text-xl font-semibold text-gray-800">${project.title} (${project.year})</h3>
                 `;
-            }).join("");
+
+                card.addEventListener("click", () => {
+                    showProjectModal(project);
+                });
+
+                container.appendChild(card);
+            });
         }
+
+
+        function showProjectModal(project) {
+            const modal = document.getElementById("projectModal");
+            const modalContent = document.getElementById("modalContent");
+
+            modalContent.innerHTML = `
+                <img src="${project.main_image}" alt= "${project.title}" />
+                <h2 class="text-2xl font-bold mb-2">${project.title} (${project.year})</h2>
+                <p class="mb-2 text-gray-700"><strong>Purpose:</strong> ${project.purpose || "N/A"}</p>
+                <p class="mb-2 text-gray-700"><strong>Technologies:</strong> ${project.technologies || "N/A"}</p>
+                <p class="mb-4 text-gray-700"><strong>Description:</strong> ${project.description || "No description available."}</p>
+
+                ${project.video ? `<video class="mb-4 w-full rounded" controls src="${project.video}"></video>` : ""}
+                ${project.images ? project.images.map(img => `<img src="${img}" class="mb-2 w-full rounded" />`).join("") : ""}
+            `;
+
+            modal.classList.remove("hidden");
+        }
+
         
         // Generate HTML elements for projects and add them to the project-grid
-        const projectsHTML = generateProjectsHTML(data.projects);
-        document.querySelector('.project-grid').innerHTML = projectsHTML;
-
-
-
+        generateProjectsHTML(data.projects);
+        
+        // Close modal
+        document.getElementById("closeModal").addEventListener("click", () => {
+            document.getElementById("projectModal").classList.add("hidden");
+        });
+        document.getElementById("projectModal").addEventListener("click", () => {
+            document.getElementById("projectModal").classList.add("hidden");
+        });
 
 // ======================================================================================
         const skillFilterButtons = document.querySelectorAll('#skills .filter-btn');
@@ -452,5 +516,6 @@
             });
         });
     </script>
+
 </body>
 </html>
