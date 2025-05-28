@@ -168,7 +168,7 @@
             <div class="project-grid">
                     <!-- Modal -->
                     <div id="projectModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
-                    <div class="bg-white rounded-xl p-6 w-11/12 max-w-2xl relative">
+                    <div class="bg-white rounded-xl p-6 w-[70%] relative">
                         <!-- Close button -->
                         <button id="closeModal" class="absolute top-2 right-2 text-2xl leading-none font-bold text-white bg-red-500 hover:bg-red-600 rounded-md px-3 py-1 shadow-md">&times;</button>
 
@@ -194,12 +194,12 @@
                     <p class="text-gray-600"><strong>Phone:</strong> <a href="tel:+918732999707" class="text-blue-600 hover:underline">+91 8732999707</a></p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="www.linkedin.com/in/ashish-pipaliya-16077718b" class="text-gray-600 hover:text-blue-600 transform hover:scale-110 transition">
+                    <a href="https://www.linkedin.com/in/ashish-pipaliya-16077718b/" class="text-gray-600 hover:text-blue-600 transform hover:scale-110 transition">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zm-1.5 15.5v-5.5a3.5 3.5 0 00-7 0v5.5h7zm-7-10.5a2.5 2.5 0 115 0 2.5 2.5 0 01-5 0zm-2.5 10.5v-8h-2v8h2zm-1-10.5a1 1 0 110-2 1 1 0 010 2z"/></svg>
                     </a>
                     <a href="https://github.com/ap-707" class="text-gray-600 hover:text-blue-600 transform hover:scale-110 transition">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-3.16 19.44c.5.09.68-.22.68-.48v-1.69c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0012 2z"/></svg>
-                    </a>
+                    </a>1
                 </div>
             </div>
         </div>
@@ -477,20 +477,24 @@
             const modalContent = document.getElementById("modalContent");
 
             modalContent.innerHTML = `
-                <div style="overflow-x: auto; white-space: nowrap;">
-                    ${
-                        project.main_image?.images?.map(img => 
-                            `<img src="${img}" alt="${project.title}" class="inline-block w-full m-1 rounded-lg" />`
-                        ).join("") || ""
-                    }
+            <div class="flex flex-col md:flex-row gap-4">
+                <!-- Left: Horizontal Scrollable Images -->
+                <div class="overflow-x-auto whitespace-nowrap md:w-1/2">
+                ${
+                    project.main_image?.images?.map(img => 
+                    `<img src="${img}" alt="${project.title}" class="inline-block w-full mr-2 mb-2 rounded-lg" />`
+                    ).join("") || ""
+                }
                 </div>
+
+                <!-- Right: Project Details -->
+                <div class="md:w-1/2">
                 <h2 class="text-2xl font-bold mb-2">${project.title} (${project.year})</h2>
                 <p class="mb-2 text-gray-700"><strong>Purpose:</strong> ${project.purpose || "N/A"}</p>
                 <p class="mb-2 text-gray-700"><strong>Technologies:</strong> ${project.technologies || "N/A"}</p>
                 <p class="mb-4 text-gray-700"><strong>Description:</strong> ${project.description || "No description available."}</p>
-
-                ${project.video ? `<video class="mb-4 w-full rounded" controls src="${project.video}"></video>` : ""}
-                ${project.images ? project.images.map(img => `<img src="${img}" class="mb-2 w-full rounded" />`).join("") : ""}
+                </div>
+            </div>
             `;
 
             modal.classList.remove("hidden");
