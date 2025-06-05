@@ -113,7 +113,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl sm:text-6xl font-bold font-poppins mb-4 animate__animated animate__fadeIn">Ashish Pipaliya</h1>
             <p class="text-xl sm:text-2xl mb-0 animate__animated animate__fadeIn animate__delay-1s">Data Analyst | Transforming Data into Actionable Insights</p>
-            <!-- <a href="#contact" class="inline-block bg-white text-blue-600 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 transition transform hover:scale-105 opacity-100">Let's Connect</a> -->
+            <a href="https://raw.githubusercontent.com/ap-707/AshishPipaliya/test.jpg" class="inline-block w-auto bg-white text-blue-600 mt-6 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 hover:scale-105 opacity-100">
+                <button class="flex w-auto">
+                    Download Resume<img src="https://img.icons8.com/?size=100&id=iKHgFBf3bRsI&format=png" alt="Link" class="skill-icon w-6 h-6"/>
+                </button>
+            </a>
         </div>
     </section>
 
@@ -214,190 +218,206 @@
 
     <script>
 
+        function startDownload() {
+            window.open('https://github.com/ap-707/AshishPipaliya/blob/8ff77e55cbed33917bf2b149e8e9f6316a69de6a/test.jpg'); 
+            }
+
         const data={
-        "skills": [
-            {
-            "category": "programming",
-            "items": [
-                {"name": "Python", "icon": "https://img.icons8.com/ios-filled/48/000000/python.png"},
-                {"name": "SQL", "icon": "https://img.icons8.com/ios-filled/48/000000/sql.png"},
-                {"name": "Java", "icon": "https://img.icons8.com/ios-filled/48/000000/java-coffee-cup-logo.png"},
-                {"name": "C", "icon": "https://img.icons8.com/?size=100&id=66724&format=png&color=1A1A1A"},
-                {"name": "C++", "icon": "https://img.icons8.com/ios-filled/48/000000/c-plus-plus-logo.png"},
-                {"name": "React Native", "icon": "https://img.icons8.com/ios-filled/48/000000/react-native.png"},
-                {"name": "HTML", "icon": "https://img.icons8.com/ios-filled/48/000000/html-5.png"},
-                {"name": "CSS", "icon": "https://img.icons8.com/ios-filled/48/000000/css3.png"},
-                {"name": "JavaScript", "icon": "https://img.icons8.com/ios-filled/48/000000/javascript.png"},
-                {"name": "PHP", "icon": "https://img.icons8.com/ios-filled/48/000000/php.png"}
+            "skills": [
+                {
+                "category": "programming",
+                "items": [
+                    {"name": "Python", "icon": "https://img.icons8.com/ios-filled/48/000000/python.png"},
+                    {"name": "SQL", "icon": "https://img.icons8.com/ios-filled/48/000000/sql.png"},
+                    {"name": "Java", "icon": "https://img.icons8.com/ios-filled/48/000000/java-coffee-cup-logo.png"},
+                    {"name": "C", "icon": "https://img.icons8.com/?size=100&id=66724&format=png&color=1A1A1A"},
+                    {"name": "C++", "icon": "https://img.icons8.com/ios-filled/48/000000/c-plus-plus-logo.png"},
+                    {"name": "React Native", "icon": "https://img.icons8.com/ios-filled/48/000000/react-native.png"},
+                    {"name": "HTML", "icon": "https://img.icons8.com/ios-filled/48/000000/html-5.png"},
+                    {"name": "CSS", "icon": "https://img.icons8.com/ios-filled/48/000000/css3.png"},
+                    {"name": "JavaScript", "icon": "https://img.icons8.com/ios-filled/48/000000/javascript.png"},
+                    {"name": "PHP", "icon": "https://img.icons8.com/ios-filled/48/000000/php.png"}
+                ]
+                },
+                {
+                "category": "machine-learning",
+                "items": [
+                    {"name": "Data Pre-Processing", "icon": "https://img.icons8.com/ios-filled/48/000000/data-configuration.png"},
+                    {"name": "Deep Learning", "icon": "https://img.icons8.com/?size=64&id=u5cBN2YgFqn5&format=png&color=1A1A1A"},
+                    {"name": "NLP", "icon": "https://img.icons8.com/ios-filled/48/000000/speech-bubble.png"},
+                    {"name": "Computer Vision", "icon": "https://img.icons8.com/?size=48&id=YNoETM4GGoUU&format=png&color=1A1A1A"},
+                    {"name": "Statistics", "icon": "https://img.icons8.com/ios-filled/48/000000/statistics.png"}
+                ]
+                },
+                {
+                "category": "tools",
+                "items": [
+                    {"name": "Power BI", "icon": "https://img.icons8.com/?size=100&id=QMTbsd0FVhHS&format=png&color=1A1A1A"},
+                    {"name": "Tableau", "icon": "https://img.icons8.com/ios-filled/48/000000/tableau-software.png"},
+                    {"name": "MS Office", "icon": "https://img.icons8.com/?size=100&id=117062&format=png&color=1A1A1A"},
+                    {"name": "Looker Studio", "icon": "https://img.icons8.com/ios-filled/48/000000/dashboard.png"},
+                    {"name": "Power Automate", "icon": "https://static-00.iconduck.com/assets.00/power-automate-icon-144x119-0z97x2m7.png"},
+                    {"name": "Google Analytics", "icon": "https://img.icons8.com/?size=128&id=ZSt7LSFvNpZG&format=png"},
+                    {"name": "Google BigQuery", "icon": "https://img.icons8.com/ios-filled/48/000000/database.png"}
+                ]
+                },
+                {
+                "category": "soft-skills",
+                "items": [
+                    {"name": "Analytical Skills", "icon": "https://img.icons8.com/?size=100&id=xYlFNxNeJAzA&format=png"},
+                    {"name": "Problem Solving", "icon": "https://img.icons8.com/?size=128&id=yku81UQEXoew&format=png"},
+                    {"name": "Leadership", "icon": "https://img.icons8.com/ios-filled/48/000000/leadership.png"},
+                    {"name": "Decision Making", "icon": "https://img.icons8.com/ios-filled/48/000000/decision.png"},
+                    {"name": "Observing", "icon": "https://img.icons8.com/?size=100&id=113885&format=png"},
+                    {"name": "Market Research", "icon": "https://img.icons8.com/?size=100&id=57711&format=png"}
+                ]
+                }
+            ],
+            "projects": [
+                {
+                    "main_image": {
+                        "images": [
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg",
+                        ]
+                    },
+                    "image": "https://user-images.githubusercontent.com/69152112/225086030-29852651-c4c3-451b-bf42-19385410343c.png",
+                    "projectLink":"https://www.w3schools.com",
+                    "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+                    "title": "Diamond Price Prediction",
+                    "year": 2024,
+                    "category": "data",
+                    "purpose": "Build an algorithm to predict diamond prices based on current market price and demand.",
+                    "technologies": "Python, Flask, Machine Learning (Decision Tree) ,HTML, CSS, JS",
+                    "description": "This algorithm predicts diamond prices using a human-like thought process, analyzing past and market data to save time on repetitive analysis of 37,000 diamond criteria."
+                },
+                {
+                    "main_image": {
+                        "images": [
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
+                        ]
+                    },
+                    "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
+                    "projectLink":"https://www.w3schools.com",
+                    "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+                    "title": "Web Browser Extensions",
+                    "year": 2024,
+                    "category": "automation",
+                    "purpose": "Reduce manual searching by highlighting key data on websites.",
+                    "technologies": "Java, JavaScript",
+                    "description": "Automatically highlights important details during website research, saving time for users."
+                },
+                {
+                    "main_image": {
+                        "images": [
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
+                        ]
+                    },
+                    "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
+                    "projectLink":"https://www.w3schools.com",
+                    "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+                    "title": "Scraping and Automation",
+                    "year": 2024,
+                    "category": "automation",
+                    "purpose": "Automate data scraping and formatting for faster decision-making.",
+                    "technologies": "Python (Selenium, BeautifulSoup, HTML, CSS, JS, Excel, PyGui, Macros)",
+                    "description": "Scrapes data from websites, formats it in Excel, and performs automated analysis to deliver concise decision-making insights."
+                },
+                {
+                    "main_image": {
+                        "images": [
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
+                        ]
+                    },
+                    "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
+                    "projectLink":"https://www.w3schools.com",
+                    "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+                    "title": "Twitter Sentiment Analysis",
+                    "year": 2023,
+                    "category": "data",
+                    "purpose": "Analyze public sentiment on state government and opposition parties.",
+                    "technologies": "Python (Selenium), NLP, Excel",
+                    "description": "Provides insights into public opinions on government policies and schemes using sentiment analysis."
+                },
+                {
+                    "main_image": {
+                        "images": [
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
+                        ]
+                    },
+                    "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
+                    "projectLink":"https://www.w3schools.com",
+                    "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+                    "title": "Uber Ride Predictive Modelling",
+                    "year": 2023,
+                    "category": "data",
+                    "purpose": "Research Uber ride cancellation prediction and fare estimation.",
+                    "technologies": "Python, Power BI, Java",
+                    "description": "Utilizes exploratory data analysis and machine learning (linear regression, logistic regression, gradient boosting, decision trees) to build predictive models. Presented at IACIDS '23."
+                },
+                {
+                    "main_image": {
+                        "images": [
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135055.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135122.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135154.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135305.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135330.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135345.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135443.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135451.png", 
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135353.png", 
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135511.png", 
+                        ]
+                    },
+                    "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-startup-stock-photos-7376.jpg",
+                    "projectLink":"https://github.com/ap-707/Complaint-Cube.git",
+                    "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+                    "title": "Complaint Cube",
+                    "year": 2022,
+                    "category": "mobile",
+                    "purpose": "Mobile app to address local community issues.",
+                    "technologies": "React Native, PHP, MySQL, Java",
+                    "description": "A React Native app enabling users to report community problems efficiently, with PHP and MySQL for seamless data management."
+                },
+                {
+                    "main_image": {
+                        "images": [
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Company sales.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Inventory vs sale.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI//Monthly performance.png",
+                        ]
+                    },
+                    "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Company sales.png",
+                    "projectLink":"",
+                    "MediaLink":"",
+                    "title": "PowerBI Dashboard",
+                    "year": 2023-2024,
+                    "category": "data",
+                    "purpose": "Inventory Management, Sales Tracking and Production Control, Monthly Performance & Evaluation",
+                    "technologies": "PowerBI , SQL, Python",
+                    "description": " </br><strong>Monthly Performance Dashboard:</strong> </br>This dashboard shows monthly performance of different product categories. By visualizing trends, highlighting high-performing categories and monthly growth, it helps decision-makers to make data-driven decisions. Key features include dynamic filters, trend analysis, and year-to-date comparisons. </br></br><strong>Inventory vs Sales Dashboard:</strong></br> The Inventory vs Sales dashboard helps in balancing between stock levels and sales performance. It highlights understocked or overstocked products and identifies items with low sales velocity. This enables better inventory planning, reduces holding costs, and minimizes lost sales opportunities. The dashboard includes visual cues for critical stock alerts, sales-to-inventory ratios, and actionable insights. </br></br> <strong>Company Sales Dashboard:</strong> </br> This dashboard focuses on analyzing sales distribution by company or client. It provides a breakdown of which companies purchased which products, the volume of sales, and purchasing trends over time and monitoring their buying patterns."
+                }
             ]
-            },
-            {
-            "category": "machine-learning",
-            "items": [
-                {"name": "Data Pre-Processing", "icon": "https://img.icons8.com/ios-filled/48/000000/data-configuration.png"},
-                {"name": "Deep Learning", "icon": "https://img.icons8.com/?size=64&id=u5cBN2YgFqn5&format=png&color=1A1A1A"},
-                {"name": "NLP", "icon": "https://img.icons8.com/ios-filled/48/000000/speech-bubble.png"},
-                {"name": "Computer Vision", "icon": "https://img.icons8.com/?size=48&id=YNoETM4GGoUU&format=png&color=1A1A1A"},
-                {"name": "Statistics", "icon": "https://img.icons8.com/ios-filled/48/000000/statistics.png"}
-            ]
-            },
-            {
-            "category": "tools",
-            "items": [
-                {"name": "Power BI", "icon": "https://img.icons8.com/?size=100&id=QMTbsd0FVhHS&format=png&color=1A1A1A"},
-                {"name": "Tableau", "icon": "https://img.icons8.com/ios-filled/48/000000/tableau-software.png"},
-                {"name": "MS Office", "icon": "https://img.icons8.com/?size=100&id=117062&format=png&color=1A1A1A"},
-                {"name": "Looker Studio", "icon": "https://img.icons8.com/ios-filled/48/000000/dashboard.png"},
-                {"name": "Power Automate", "icon": "https://static-00.iconduck.com/assets.00/power-automate-icon-144x119-0z97x2m7.png"},
-                {"name": "Google Analytics", "icon": "https://img.icons8.com/?size=128&id=ZSt7LSFvNpZG&format=png"},
-                {"name": "Google BigQuery", "icon": "https://img.icons8.com/ios-filled/48/000000/database.png"}
-            ]
-            },
-            {
-            "category": "soft-skills",
-            "items": [
-                {"name": "Analytical Skills", "icon": "https://img.icons8.com/?size=100&id=xYlFNxNeJAzA&format=png"},
-                {"name": "Problem Solving", "icon": "https://img.icons8.com/?size=128&id=yku81UQEXoew&format=png"},
-                {"name": "Leadership", "icon": "https://img.icons8.com/ios-filled/48/000000/leadership.png"},
-                {"name": "Decision Making", "icon": "https://img.icons8.com/ios-filled/48/000000/decision.png"},
-                {"name": "Observing", "icon": "https://img.icons8.com/?size=100&id=113885&format=png"},
-                {"name": "Market Research", "icon": "https://img.icons8.com/?size=100&id=57711&format=png"}
-            ]
-            }
-        ],
-        "projects": [
-            {
-            "main_image": {
-                "images": [
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg",
-                ]
-            },
-            "image": "https://user-images.githubusercontent.com/69152112/225086030-29852651-c4c3-451b-bf42-19385410343c.png",
-            "projectLink":"https://www.w3schools.com",
-            "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
-            "title": "Diamond Price Prediction",
-            "year": 2024,
-            "category": "data",
-            "purpose": "Build an algorithm to predict diamond prices based on current market price and demand.",
-            "technologies": "Python, Flask, Machine Learning (Decision Tree) ,HTML, CSS, JS",
-            "description": "This algorithm predicts diamond prices using a human-like thought process, analyzing past and market data to save time on repetitive analysis of 37,000 diamond criteria.",
-            "hasUpload": true
-            },
-            {
-            "main_image": {
-                "images": [
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
-                ]
-            },
-            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
-            "projectLink":"https://www.w3schools.com",
-            "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
-            "title": "Web Browser Extensions",
-            "year": 2024,
-            "category": "automation",
-            "purpose": "Reduce manual searching by highlighting key data on websites.",
-            "technologies": "Java, JavaScript",
-            "description": "Automatically highlights important details during website research, saving time for users.",
-            "hasUpload": false
-            },
-            {
-            "main_image": {
-                "images": [
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
-                ]
-            },
-            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
-            "projectLink":"https://www.w3schools.com",
-            "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
-            "title": "Scraping and Automation",
-            "year": 2024,
-            "category": "automation",
-            "purpose": "Automate data scraping and formatting for faster decision-making.",
-            "technologies": "Python (Selenium, BeautifulSoup, HTML, CSS, JS, Excel, PyGui, Macros)",
-            "description": "Scrapes data from websites, formats it in Excel, and performs automated analysis to deliver concise decision-making insights.",
-            "hasUpload": false
-            },
-            {
-            "main_image": {
-                "images": [
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
-                ]
-            },
-            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
-            "projectLink":"https://www.w3schools.com",
-            "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
-            "title": "Twitter Sentiment Analysis",
-            "year": 2023,
-            "category": "data",
-            "purpose": "Analyze public sentiment on state government and opposition parties.",
-            "technologies": "Python (Selenium), NLP, Excel",
-            "description": "Provides insights into public opinions on government policies and schemes using sentiment analysis.",
-            "hasUpload": false
-            },
-            {
-            "main_image": {
-                "images": [
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
-                ]
-            },
-            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
-            "projectLink":"https://www.w3schools.com",
-            "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
-            "title": "Uber Ride Predictive Modelling",
-            "year": 2023,
-            "category": "data",
-            "purpose": "Research Uber ride cancellation prediction and fare estimation.",
-            "technologies": "Python, Power BI, Java",
-            "description": "Utilizes exploratory data analysis and machine learning (linear regression, logistic regression, gradient boosting, decision trees) to build predictive models. Presented at IACIDS '23.",
-            "hasUpload": false
-            },
-            {
-            "main_image": {
-                "images": [
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135055.png",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135122.png",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135154.png",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135305.png",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135330.png",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135345.png",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135443.png",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135451.png", 
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135353.png", 
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135511.png", 
-                ]
-            },
-            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-startup-stock-photos-7376.jpg",
-            "projectLink":"https://github.com/ap-707/Complaint-Cube.git",
-            "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
-            "title": "Complaint Cube",
-            "year": 2022,
-            "category": "mobile",
-            "purpose": "Mobile app to address local community issues.",
-            "technologies": "React Native, PHP, MySQL, Java",
-            "description": "A React Native app enabling users to report community problems efficiently, with PHP and MySQL for seamless data management.",
-            "hasUpload": false
-            }
-        ]
         }
 
         // GSAP Animations
@@ -507,7 +527,7 @@
                 </div>  
 
                 <!-- Right: Project Details -->
-                <div class="md:w-1/2">
+                <div class="md:w-1/2 overflow-y-scroll max-h-[430px]">
                     <div class="flex items-center mb-2">
                         <h2 class="text-2xl font-bold mr-2">${project.title} (${project.year})</h2>
                         <a href="${project.projectLink}"><img src="https://img.icons8.com/?size=100&id=FxJPExPJFHZ9&format=png" alt="Link" class="skill-icon w-6 h-6" /></a>
