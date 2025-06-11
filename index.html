@@ -71,6 +71,7 @@
         .project-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
+            max-height: 240px;
         }
         .project-card:hover {
             transform: scale(1.05);
@@ -113,7 +114,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl sm:text-6xl font-bold font-poppins mb-4 animate__animated animate__fadeIn">Ashish Pipaliya</h1>
             <p class="text-xl sm:text-2xl mb-0 animate__animated animate__fadeIn animate__delay-1s">Data Analyst | Transforming Data into Actionable Insights</p>
-            <a href="https://raw.githubusercontent.com/ap-707/AshishPipaliya/test.jpg" class="inline-block w-auto bg-white text-blue-600 mt-6 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 hover:scale-105 opacity-100">
+            <a href="https://drive.google.com/file/d/1p-80zyCKNYY-2WhVdCl7OUvCFBYG5NU9/view?usp=sharing" class="inline-block w-auto bg-white text-blue-600 mt-6 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 hover:scale-105 opacity-100">
                 <button class="flex w-auto">
                     Download Resume<img src="https://img.icons8.com/?size=100&id=iKHgFBf3bRsI&format=png" alt="Link" class="skill-icon w-6 h-6"/>
                 </button>
@@ -172,7 +173,7 @@
             <div class="project-grid">
                     <!-- Modal -->
                     <div id="projectModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
-                    <div class="bg-white rounded-xl p-6 w-[70%] max-h-[500px] relative">
+                    <div class="bg-white rounded-xl p-6 w-[70%] max-h-[60%] relative">
                         <!-- Close button -->
                         <button id="closeModal" class="absolute top-2 right-2 text-2xl leading-none font-bold text-white bg-red-500 hover:bg-red-600 rounded-md px-3 py-1 shadow-md">&times;</button>
 
@@ -199,10 +200,11 @@
                 </div>
                 <div class="flex space-x-6">
                     <a href="https://www.linkedin.com/in/ashish-pipaliya-16077718b/" class="text-gray-600 hover:text-blue-600 transform hover:scale-110 transition">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zm-1.5 15.5v-5.5a3.5 3.5 0 00-7 0v5.5h7zm-7-10.5a2.5 2.5 0 115 0 2.5 2.5 0 01-5 0zm-2.5 10.5v-8h-2v8h2zm-1-10.5a1 1 0 110-2 1 1 0 010 2z"/></svg>
+                        <img class="w-8 h-8" src="https://img.icons8.com/?size=100&id=8808&format=png" alt="Linkedin">
+                        
                     </a>
                     <a href="https://github.com/ap-707" class="text-gray-600 hover:text-blue-600 transform hover:scale-110 transition">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-3.16 19.44c.5.09.68-.22.68-.48v-1.69c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0012 2z"/></svg>
+                        <img class="w-8 h-8" src="https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png" alt="GitHub">
                     </a>
                 </div>
             </div>
@@ -212,14 +214,15 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-400">© 2025 Ashish Pipaliya. Built with passion for data.</p>
+            <p class="text-gray-400">© <span id="year"></span>  Ashish Pipaliya. Built with passion for data.</p>
         </div>
     </footer>
-
     <script>
 
+        document.getElementById("year").textContent = new Date().getFullYear();
+
         function startDownload() {
-            window.open('https://github.com/ap-707/AshishPipaliya/blob/8ff77e55cbed33917bf2b149e8e9f6316a69de6a/test.jpg'); 
+            window.open('https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg'); 
             }
 
         const data={
@@ -285,8 +288,8 @@
                         ]
                     },
                     "image": "https://user-images.githubusercontent.com/69152112/225086030-29852651-c4c3-451b-bf42-19385410343c.png",
-                    "projectLink":"https://www.w3schools.com",
-                    "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+                    "projectLink":"https://github.com/ap-707/Diamond-Price-Prediction.git   ",
+                    "MediaLink":"",
                     "title": "Diamond Price Prediction",
                     "year": 2024,
                     "category": "data",
@@ -297,16 +300,16 @@
                 {
                     "main_image": {
                         "images": [
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/browser-extensions.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/browser-extensions.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/browser-extensions.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/browser-extensions.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/browser-extensions.png",
                         ]
                     },
-                    "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
-                    "projectLink":"https://www.w3schools.com",
-                    "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+                    "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/browser-extensions.png",
+                    "projectLink":"https://github.com/ap-707/RapNet_Highlighter.git",
+                    "MediaLink":"",
                     "title": "Web Browser Extensions",
                     "year": 2024,
                     "category": "automation",
@@ -317,16 +320,16 @@
                 {
                     "main_image": {
                         "images": [
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/webscraper-logo-header.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/webscraper-logo-header.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/webscraper-logo-header.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/webscraper-logo-header.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/webscraper-logo-header.png",
                         ]
                     },
-                    "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
-                    "projectLink":"https://www.w3schools.com",
-                    "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+                    "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/webscraper-logo-header.png",
+                    "projectLink":"https://github.com/ap-707/Data-Scrapping.git",
+                    "MediaLink":"",
                     "title": "Scraping and Automation",
                     "year": 2024,
                     "category": "automation",
@@ -337,16 +340,16 @@
                 {
                     "main_image": {
                         "images": [
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Twitter-Sentiment-Analysis-1.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Twitter-Sentiment-Analysis-1.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Twitter-Sentiment-Analysis-1.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Twitter-Sentiment-Analysis-1.png",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Twitter-Sentiment-Analysis-1.png",
                         ]
                     },
-                    "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
-                    "projectLink":"https://www.w3schools.com",
-                    "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+                    "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Twitter-Sentiment-Analysis-1.png",
+                    "projectLink":"https://github.com/Aiggpa-Bhopal/Twitter-sentiment-analysis-English-and-Hindi-tweets.git",
+                    "MediaLink":"",
                     "title": "Twitter Sentiment Analysis",
                     "year": 2023,
                     "category": "data",
@@ -357,16 +360,12 @@
                 {
                     "main_image": {
                         "images": [
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Uber-Thumbnail.jpg"
                         ]
                     },
-                    "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
-                    "projectLink":"https://www.w3schools.com",
-                    "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+                    "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Uber-Thumbnail.jpg",
+                    "projectLink":"https://drive.google.com/file/d/1dr4fBjAW4j13pDxe4V1106RLk22crZ8c/view?usp=sharing",
+                    "MediaLink":"",
                     "title": "Uber Ride Predictive Modelling",
                     "year": 2023,
                     "category": "data",
@@ -389,9 +388,9 @@
                             "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135511.png", 
                         ]
                     },
-                    "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Logo.jpg",
+                    "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Complaint-cube-Logo.jpg",
                     "projectLink":"https://github.com/ap-707/Complaint-Cube.git",
-                    "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+                    "MediaLink":"https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=sharing",
                     "title": "Complaint Cube",
                     "year": 2022,
                     "category": "mobile",
@@ -409,9 +408,9 @@
                     },
                     "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Company sales.png",
                     "projectLink":"",
-                    "MediaLink":"",
+                    "MediaLink":"https://drive.google.com/drive/folders/13RpZzlfC65ZetCiu_msRxbP6p3QIqnpm?usp=sharing",
                     "title": "PowerBI Dashboard",
-                    "year": 2023-2024,
+                    "year": "2023-2024",
                     "category": "data",
                     "purpose": "Inventory Management, Sales Tracking and Production Control, Monthly Performance & Evaluation",
                     "technologies": "PowerBI , SQL, Python",
@@ -530,11 +529,21 @@
                 <div class="md:w-1/2 overflow-y-scroll max-h-[430px]">
                     <div class="flex items-center mb-2">
                         <h2 class="text-2xl font-bold mr-2">${project.title} (${project.year})</h2>
-                        <a href="${project.projectLink}"><img src="https://img.icons8.com/?size=100&id=FxJPExPJFHZ9&format=png" alt="Link" class="skill-icon w-6 h-6" /></a>
+                        ${
+                        project.projectLink ? 
+                        `<a href="${project.projectLink}"><img src="https://img.icons8.com/?size=100&id=FxJPExPJFHZ9&format=png" alt="Link" class="skill-icon w-6 h-6" /></a>` :
+                        ""}
                     </div>
                     <p class="mb-2 text-gray-700"><strong>Purpose:</strong><br/> ${project.purpose || "N/A"}</p>
                     <p class="mb-2 text-gray-700"><strong>Technologies:</strong><br/> ${project.technologies || "N/A"}</p>
                     <p class="mb-4 text-gray-700"><strong>Description:</strong> ${project.description || "No description available."}</p>
+
+                    <p class="mb-4 text-gray-700">${
+                        project.MediaLink ? 
+                        `<strong>Media:</strong><a href="${project.MediaLink}"><img class="skill-icon" src="https://img.icons8.com/?size=50&id=12988&format=png" alt="File"></a>` :
+                        ""}
+                    </p>
+                    
                 </div>
             </div>
             `;
@@ -550,9 +559,7 @@
         document.getElementById("closeModal").addEventListener("click", () => {
             document.getElementById("projectModal").classList.add("hidden");
         });
-        // document.getElementById("projectModal").addEventListener("click", () => {
-        //     document.getElementById("projectModal").classList.add("hidden");
-        // });
+
 
 // ======================================================================================
         const skillFilterButtons = document.querySelectorAll('#skills .filter-btn');
