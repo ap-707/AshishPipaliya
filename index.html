@@ -137,32 +137,39 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-24 pb-20 bg-gradient-to-br from-blue-600 to-purple-700 text-white">
-        <!-- <img src="https://repository-images.githubusercontent.com/227755997/3171d680-1d98-11ea-9bfd-51ba32490a41" alt="sss"> -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl sm:text-6xl font-bold font-poppins mb-4 animate__animated animate__fadeIn">Ashish
-                Pipaliya</h1>
-            <p class="text-xl sm:text-2xl mb-0 animate__animated animate__fadeIn animate__delay-1s">Data Analyst |
-                Transforming Data into Actionable Insights</p>
-            <!-- <a href="https://drive.google.com/uc?export=download&id=1qKEFBqkqT553V052SMEprCdwzKAwpghB" target="_blank" id="download_resume" -->
-            <a href="https://drive.google.com/file/d/1qKEFBqkqT553V052SMEprCdwzKAwpghB/preview" target="_blank" id="download_resume"
-                class="inline-block w-auto bg-white text-blue-600 mt-6 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 hover:scale-105 opacity-100">
-                <button class="flex w-auto">
-                    Download Resume<img src="https://img.icons8.com/?size=100&id=iKHgFBf3bRsI&format=png" alt="Link"
+    <section id="home" 
+        class="pt-24 pb-20 bg-gradient-to-br from-blue-600 to-purple-700 text-white relative bg-cover bg-center opacity-95 shadow-[inset_0_4px_6px_rgba(0,0,0,0.3)]"
+        style="background-image: url('https://repository-images.githubusercontent.com/227755997/3171d680-1d98-11ea-9bfd-51ba32490a41');">
+        
+        <!-- Overlay for dim effect if needed -->
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+
+        <!-- Content on top -->
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-6xl font-bold font-poppins mb-4 animate__animated animate__fadeIn">
+                Ashish Pipaliya
+            </h1>
+            <p class="text-xl sm:text-2xl mb-0 animate__animated animate__fadeIn animate__delay-1s">
+                Data Analyst | Transforming Data into Actionable Insights
+            </p>
+            <a href="https://drive.google.com/file/d/1qKEFBqkqT553V052SMEprCdwzKAwpghB/preview" target="_blank" 
+            id="download_resume"
+            class="inline-block w-auto bg-white text-blue-600 mt-6 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 hover:scale-105 opacity-100">
+                <button class="flex items-center gap-2">
+                    Download Resume
+                    <img src="https://img.icons8.com/?size=100&id=iKHgFBf3bRsI&format=png" alt="Link"
                         class="skill-icon w-6 h-6" />
                 </button>
             </a>
         </div>
     </section>
+
     
     <!-- About Section -->
-    <section id="about" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" class="pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-justify">
             <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center font-poppins">About Me</h2>
             <div class="flex flex-col md:flex-row items-center gap-12">
-                <!-- <div class="md:w-1/3">
-                    <img src="https://via.placeholder.com/300" alt="Ashish Pipaliya" class="rounded-full w-72 h-72 mx-auto object-cover shadow-lg transform transition hover:scale-110">
-                </div> -->
                 <div class="md:w-2/3" style="width: 100%;">
                     <p class="text-lg text-gray-700 leading-relaxed">
                         I'm a passionate data analyst with a year of experience in uncovering insights from complex
@@ -178,14 +185,14 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-white">
+    <section id="experience" class="pt-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center font-poppins">Experience</h2>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-white">
+    <section id="skills" class="pt-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center font-poppins">My Expertise</h2>
             <!-- Skill Filter -->
@@ -214,7 +221,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20">
+    <section id="projects" class="pt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center font-poppins">Projects</h2>
             <!-- Project Filter -->
@@ -363,11 +370,7 @@
                 {
                     "main_image": {
                         "images": [
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-brett-sayles-3803517.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Diamond-price-prediction.jpg"
                         ]
                     },
                     "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Diamond-price-prediction.jpg",
@@ -383,11 +386,7 @@
                 {
                     "main_image": {
                         "images": [
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-divinetechygirl-1181263.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/browser-extensions.png"
                         ]
                     },
                     "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/browser-extensions.png",
@@ -403,11 +402,7 @@
                 {
                     "main_image": {
                         "images": [
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-fauxels-3183153.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/webscraper-logo-header.png"
                         ]
                     },
                     "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/webscraper-logo-header.png",
@@ -423,11 +418,7 @@
                 {
                     "main_image": {
                         "images": [
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-goumbik-669615.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Twitter-Sentiment-Analysis-1.png"
                         ]
                     },
                     "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Twitter-Sentiment-Analysis-1.png",
@@ -443,11 +434,7 @@
                 {
                     "main_image": {
                         "images": [
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
-                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/pexels-pixabay-270408.jpg",
+                            "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Uber-Thumbnail.jpg"
                         ]
                     },
                     "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Uber-Thumbnail.jpg",
