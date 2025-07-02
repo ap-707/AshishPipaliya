@@ -54,15 +54,15 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M3P9L931NE"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-M3P9L931NE');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-M3P9L931NE');
     </script>
 
 
-    
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -77,6 +77,7 @@
             overflow: hidden;
             max-height: 0;
         }
+
         .company-details.open {
             max-height: 1000px;
         }
@@ -94,6 +95,12 @@
             border-color: #93c5fd;
         }
 
+        .certificate-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #f9fafb;
+            border-radius: 8px;
+        }
+
         .skill-icon {
             width: 24px;
             height: 24px;
@@ -102,11 +109,6 @@
         .project-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
-        }
-
-        .project-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
 
         .filter-btn {
@@ -150,10 +152,10 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" 
+    <section id="home"
         class="pt-24 pb-20 bg-gradient-to-br from-blue-600 to-purple-700 text-white relative bg-cover bg-center opacity-95 shadow-[inset_0_4px_6px_rgba(0,0,0,0.3)]"
         style="background-image: url('https://repository-images.githubusercontent.com/227755997/3171d680-1d98-11ea-9bfd-51ba32490a41');">
-        
+
         <!-- Overlay for dim effect if needed -->
         <div class="absolute inset-0 bg-black opacity-30"></div>
 
@@ -165,9 +167,9 @@
             <p class="text-xl sm:text-2xl mb-0 animate__animated animate__fadeIn animate__delay-1s">
                 Data Analyst | Transforming Data into Actionable Insights
             </p>
-            <a href="https://drive.google.com/file/d/1qKEFBqkqT553V052SMEprCdwzKAwpghB/preview" target="_blank" 
-            id="download_resume"
-            class="inline-block w-auto bg-white text-blue-600 mt-6 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 hover:scale-105 opacity-100">
+            <a href="https://drive.google.com/file/d/1qKEFBqkqT553V052SMEprCdwzKAwpghB/preview" target="_blank"
+                id="download_resume"
+                class="inline-block w-auto bg-white text-blue-600 mt-6 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 hover:scale-105 opacity-100">
                 <button class="flex items-center gap-2">
                     Download Resume
                     <img src="https://img.icons8.com/?size=100&id=iKHgFBf3bRsI&format=png" alt="Link"
@@ -177,9 +179,9 @@
         </div>
     </section>
 
-    
+
     <!-- About Section -->
-    <section id="about" class="pt-20">
+    <section id="about" class="py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-justify">
             <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center font-poppins">About Me</h2>
             <div class="flex flex-col md:flex-row items-center gap-12">
@@ -197,15 +199,39 @@
         </div>
     </section>
 
+    <!-- Certificate Section -->
+
+    <section id="certificate" class="py-10 bg-white" hidden>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center font-poppins">My Certifications</h2>
+
+             <!-- Certificate Image Modal -->
+            <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-60">
+                <div class="bg-white p-4 h-fit max-h-[700px] w-fit max-w-[50%] rounded-lg max-w-3xl relative">
+                    <button onclick="closeModal()" class="absolute top-2 right-2 text-2xl leading-none font-bold text-white bg-red-500 hover:bg-red-600 rounded-md px-3 py-1 shadow-md">&times;</button>
+                    <img id="modalImage" src="" alt="Certificate" class="w-full rounded-md" />
+                </div>
+            </div>
+
+            <div class="certificate-grid flex flex-wrap justify-center gap-4">
+            <!-- JS will inject certificate cards here -->
+                
+            </div>
+        </div>
+    </section>
+
+
+
+
     <!-- Experience Section -->
-    <section id="experience" class="pt-20 bg-white">
+    <section id="experience" class="py-10 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center font-poppins">Experience</h2>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="pt-20 bg-white">
+    <section id="skills" class="py-10 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center font-poppins">My Expertise</h2>
             <!-- Skill Filter -->
@@ -234,7 +260,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="pt-20">
+    <section id="projects" class="py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center font-poppins">Projects</h2>
             <!-- Project Filter -->
@@ -254,12 +280,10 @@
             </div>
             <div class="project-grid">
                 <!-- Modal -->
-                <div id="projectModal"
-                    class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
+                <div id="projectModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
                     <div class="bg-white rounded-xl p-6 w-[70%] max-h-[500px] relative">
                         <!-- Close button -->
-                        <button id="closeModal"
-                            class="absolute top-2 right-2 text-2xl leading-none font-bold text-white bg-red-500 hover:bg-red-600 rounded-md px-3 py-1 shadow-md">&times;</button>
+                        <button id="closeModal" class="absolute top-2 right-2 text-2xl leading-none font-bold text-white bg-red-500 hover:bg-red-600 rounded-md px-3 py-1 shadow-md">&times;</button>
 
                         <!-- Modal content dynamically injected -->
                         <div id="modalContent">
@@ -273,7 +297,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+    <section id="contact" class="py-10 bg-gradient-to-br from-blue-50 to-purple-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl font-bold text-gray-900 mb-12 font-poppins">Get in Touch</h2>
             <p class="text-lg text-gray-700 mb-8">Have a project in mind or just want to chat about data? Let's connect!
@@ -288,7 +312,8 @@
                 <div class="flex space-x-6">
                     <a href="https://www.linkedin.com/in/ashish-pipaliya-16077718b/"
                         class="text-gray-600 hover:text-blue-600 transform hover:scale-110 transition">
-                        <img class="skill-icon" src="https://img.icons8.com/?size=100&id=8808&format=png" alt="LinkedIn">
+                        <img class="skill-icon" src="https://img.icons8.com/?size=100&id=8808&format=png"
+                            alt="LinkedIn">
                     </a>
                     <a href="https://github.com/ap-707"
                         class="text-gray-600 hover:text-blue-600 transform hover:scale-110 transition">
@@ -305,6 +330,8 @@
             <p class="text-gray-400">© 2025 Ashish Pipaliya. Built with passion for data.</p>
         </div>
     </footer>
+
+
 
     <script>
         const link = document.getElementById("download_resume");
@@ -328,7 +355,12 @@
             link.setAttribute("target", "_blank");
             link.setAttribute("rel", "noopener noreferrer");
         }
+
         const data = {
+            "Certificates": [
+                { "name": "Data Science", "link": "https://drive.google.com/file/d/11aPgN8H9W5nqKOeQjWFWroZCVEO9pBWO/view?usp=drive_link" }
+                // { "name": "Data Science", "link": "C:/Users/Admin/Downloads/Introduction to Data Science Certificate.jpg" }
+            ],
             "skills": [
                 {
                     "category": "programming",
@@ -514,7 +546,7 @@
                     "duration": "Feb 2025 - Present",
                     "type": "Full-Time",
                     "about": "<strong>Harekrishna Exports Pvt. Ltd. (HK)</strong> is a Surat­-based, family‑run jewellery & diamond manufacturing and exporting company. Producing over 500,000 carats annually and serving 80+ countries, HK is celebrated for its vertically integrated, fair‑pricing model and state‑of‑the‑art solar‑powered facilities .",
-                    "responsibility":"Control Production & Sales, Inventory & Sales analysis, Dashboards and PowerBI reports,Automation and Process Analysis.",
+                    "responsibility": "Control Production & Sales, Inventory & Sales analysis, Dashboards and PowerBI reports,Automation and Process Analysis.",
                     "contribution": "Worked on multiple self-initiated data science, automation, and AI/ML-based projects under personal branding. Developed tools and solutions that have been deployed in academic, professional, and personal environments.",
                     "impact": ""
                 },
@@ -527,7 +559,7 @@
                     "duration": "Oct 2024 - Feb 2025",
                     "type": "Full-Time",
                     "about": "<strong>AvianSoft</strong> is a Surat-based software development company specializing in customized business solutions with a strong focus on innovation, efficiency, and client-centric delivery.",
-                    "responsibility":"R&D on Lattest Automotive Industries, Data Scraping, Google Analytics and Create Automation.",
+                    "responsibility": "R&D on Lattest Automotive Industries, Data Scraping, Google Analytics and Create Automation.",
                     "contribution": "Created an Automated Data scraping tool that collects Data from various Automotive websites, established Google Analytics on the company’s Website to track user behaviour on the company’s website.",
                     "impact": "Through Google Analytics, we were able to modify the website’s UI/UX for traffic."
                 },
@@ -540,7 +572,7 @@
                     "duration": "Jan 2024 - Aug 2024",
                     "type": "Full-Time",
                     "about": "<strong>K. Girdharlal International Pvt. Ltd.</strong> is a fourth‑generation, India‑based diamond manufacturer, globally active, with strong roots in ethical practices and sustainability including carbon‑neutral goals, green building certification, and community initiatives.",
-                    "responsibility":"Market Research, Automation, Web Scraping & Creating Diamond Price Prediction Algorithms.",
+                    "responsibility": "Market Research, Automation, Web Scraping & Creating Diamond Price Prediction Algorithms.",
                     "contribution": "Creating Automated reporting tools & processes, Web scraper, and Data Analysis through Power BI.",
                     "impact": "Optimised pricing strategies for increased profitability, customer attraction, and market reach by adapting to trends and reducing decision-making time by 30%."
                 },
@@ -553,7 +585,7 @@
                     "duration": "Jul 2023 - Aug 2023",
                     "type": "Internship",
                     "about": "<strong>Atal Bihari Vajpayee Institute of Good Governance and Policy Analysis (AIGGPA)</strong>, Bhopal is a government‑run think tank and training institute in Madhya Pradesh, established in 2007 (renamed in 2014). It drives evidence-based policymaking through data analytics, evaluation, and capacity-building initiatives.",
-                    "responsibility":"Analyse people's perspectives towards political parties through social media and reporting.",
+                    "responsibility": "Analyse people's perspectives towards political parties through social media and reporting.",
                     "contribution": "Collected data using web scraping and analysed public sentiment towards political parties using NLP.",
                     "impact": "Identified ineffective policies and developed alternative solutions, analysed the political landscape and the probability of which party will be the next government."
                 }
@@ -578,6 +610,15 @@
             ease: "power3.out"
         });
 
+        gsap.from(".certificate-card", {
+            scrollTrigger: "#certificate",
+            opacity: 0,
+            y: 20,
+            duration: 0.8,
+            stagger: 0.05,
+            ease: "power3.out"
+        });
+
         gsap.from(".skill-card", {
             scrollTrigger: "#skills",
             opacity: 0,
@@ -590,7 +631,7 @@
         gsap.from(".project-card", {
             scrollTrigger: "#projects",
             opacity: 0,
-            y: 0, // Removed y offset to prevent upward shift
+            y: 0,
             duration: 0.8,
             stagger: 0.2,
             ease: "power3.out"
@@ -599,7 +640,7 @@
         gsap.from(".experience-card", {
             scrollTrigger: "#experience",
             opacity: 0,
-            y: 0, // Removed y offset to prevent upward shift
+            y: 0,
             duration: 0.8,
             stagger: 0.2,
             ease: "power3.out"
@@ -672,23 +713,57 @@
 
 
 
+        // ===========================================================
+
+         function openModal(imageSrc) {
+            document.getElementById('modalImage').src = imageSrc;
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        // certificate-Cards
+        function generateCertiHTML(Certificates) {
+            return Certificates.map(certi => {
+                return `
+                <div onclick="openModal('https://drive.google.com/uc?export=view&id=${certi.link}')"  
+                    class="certificate-card group p-4 flex w-fit items-center space-x-3 justify-between bg-gray-100 rounded-[50px] opacity-100 hover:bg-gray-200 font-bold text-lg cursor-pointer">
+                    <span class="text-sm font-medium">${certi.name}</span>
+                    <img src="https://img.icons8.com/3d-fluency/50/prize.png" alt="icon" class="certi-icon w-6 h-6 transition-transform duration-300 ease-in-out group-hover:scale-125" />
+                </div>
+                `;
+            }).join("");
+        }
+
+
+        const CertificatesHTML = generateCertiHTML(data.Certificates);
+        document.querySelector('.certificate-grid').innerHTML = CertificatesHTML;
+
+
+
+
 
         // ===========================================================
-        // Function to generate HTML elements for skills
+        // skills-Cards
         function generateSkillsHTML(skills) {
             return skills.map(skill => {
                 return skill.items.map(item => {
                     return `
-                <div class="skill-card p-4 flex items-center space-x-3" data-category="${skill.category}">
-                <img src="${item.icon}" alt="${item.name}" class="skill-icon">
-                <p class="text-sm font-semibold text-gray-800">${item.name}</p>
-                </div>
-            `;
+                        <div class="skill-card p-4 flex items-center space-x-3" data-category="${skill.category}">
+                        <img src="${item.icon}" alt="${item.name}" class="skill-icon">
+                        <p class="text-sm font-semibold text-gray-800">${item.name}</p>
+                        </div>
+                    `;
                 }).join("");
             }).join("");
         }
 
-        // Generate HTML elements for skills and add them to the skill-grid
         const skillsHTML = generateSkillsHTML(data.skills);
         document.querySelector('.skill-grid').innerHTML = skillsHTML;
 
@@ -704,7 +779,7 @@
             // Append new cards
             projects.forEach((project, index) => {
                 const card = document.createElement("a");
-                card.className = "project-card max-h-[250px] bg-white p-6 rounded-xl shadow-md cursor-pointer flex items-center justify-center";
+                card.className = "project-card max-h-[250px] bg-white p-6 rounded-xl shadow-md cursor-pointer flex items-center justify-center hover:underline";
                 card.setAttribute("data-category", project.category);
                 card.setAttribute("data-index", index);
 
@@ -761,9 +836,6 @@
         document.getElementById("closeModal").addEventListener("click", () => {
             document.getElementById("projectModal").classList.add("hidden");
         });
-        // document.getElementById("projectModal").addEventListener("click", () => {
-        //     document.getElementById("projectModal").classList.add("hidden");
-        // });
 
         // ======================================================================================
         const skillFilterButtons = document.querySelectorAll('#skills .filter-btn');
@@ -826,6 +898,9 @@
                 gsap.set(card, { opacity: 1, y: 0 });
             });
         });
+
+
+
     </script>
 
 </body>
