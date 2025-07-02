@@ -207,9 +207,9 @@
 
              <!-- Certificate Image Modal -->
             <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-60">
-                <div class="bg-white p-4 h-fit max-h-[700px] w-fit max-w-[50%] rounded-lg max-w-3xl relative">
+                <div class="bg-white p-4 max-w-[50%] h-auto rounded-lg max-w-3xl relative">
                     <button onclick="closeModal()" class="absolute top-2 right-2 text-2xl leading-none font-bold text-white bg-red-500 hover:bg-red-600 rounded-md px-3 py-1 shadow-md">&times;</button>
-                    <img id="modalImage" src="" alt="Certificate" class="w-full rounded-md" />
+                    <img id="modalImage" src="" alt="Certificate" class="w-full max-h-[700px] rounded-md" />
                 </div>
             </div>
 
@@ -358,8 +358,11 @@
 
         const data = {
             "Certificates": [
-                { "name": "Data Science", "link": "https://drive.google.com/file/d/11aPgN8H9W5nqKOeQjWFWroZCVEO9pBWO/view?usp=drive_link" }
-                // { "name": "Data Science", "link": "C:/Users/Admin/Downloads/Introduction to Data Science Certificate.jpg" }
+                { "name": "Data Science", "link": "C:/Users/Admin/Desktop/ASHISH/TASKs/27-05-2025/download.jpg" },
+                { "name": "Dummy Data Science", "link": "C:/Users/Admin/Desktop/ASHISH/TASKs/27-05-2025/eac42cabf39c21cf858e5f844efc4a0522f8e179.png" },
+                { "name": "Dummy Data Science", "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhASHHiGNGiJ9oiWxXF7OTRQ5ONN0A_HIAX8IF2lJVgY4y4e-uXCYYFFBSDGMKzE5-Kfo&usqp=CAU" },
+                { "name": "Dummy Long Certificate", "link": "https://www.aicpeindia.ac.in/resources/docs/typing.jpg" },
+                { "name": "Dummy Certificate", "link": "https://images.bannerbear.com/requests/images/008/924/579/original/eac42cabf39c21cf858e5f844efc4a0522f8e179.png?1632808302" }
             ],
             "skills": [
                 {
@@ -732,7 +735,7 @@
         function generateCertiHTML(Certificates) {
             return Certificates.map(certi => {
                 return `
-                <div onclick="openModal('https://drive.google.com/uc?export=view&id=${certi.link}')"  
+                <div onclick="openModal('${certi.link}')"  
                     class="certificate-card group p-4 flex w-fit items-center space-x-3 justify-between bg-gray-100 rounded-[50px] opacity-100 hover:bg-gray-200 font-bold text-lg cursor-pointer">
                     <span class="text-sm font-medium">${certi.name}</span>
                     <img src="https://img.icons8.com/3d-fluency/50/prize.png" alt="icon" class="certi-icon w-6 h-6 transition-transform duration-300 ease-in-out group-hover:scale-125" />
