@@ -1,0 +1,665 @@
+
+const link = document.getElementById("download_resume");
+const url = link.getAttribute("href");
+
+// Adjust this to fit your detection logic
+const isDownloadable = url.endsWith(".pdf");
+
+if (isDownloadable) {
+    e.preventDefault(); // Stop normal navigation
+
+    // Create a temporary link element to trigger download
+    const tempLink = document.createElement("a");
+    tempLink.href = href;
+    tempLink.download = href.split("/").pop(); // Use the filename from URL
+    document.body.appendChild(tempLink);
+    tempLink.click();
+    document.body.removeChild(tempLink);
+} else {
+    // Open in new tab
+    link.setAttribute("target", "_blank");
+    link.setAttribute("rel", "noopener noreferrer");
+}
+
+// Menu Script for Mobile Or Windows
+
+const menuBtn = document.getElementById("menu-btn");
+const closeBtn = document.getElementById("close-menu");
+const mobileMenu = document.getElementById("mobile-menu");
+const overlay = document.getElementById("overlay");
+
+menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("-translate-x-full");
+    overlay.classList.remove("hidden");
+});
+
+closeBtn.addEventListener("click", () => {
+    mobileMenu.classList.add("-translate-x-full");
+    overlay.classList.add("hidden");
+});
+
+overlay.addEventListener("click", () => {
+    mobileMenu.classList.add("-translate-x-full");
+    overlay.classList.add("hidden");
+});
+
+
+
+//  My Data
+
+
+const data = {
+    "Certificates": [
+        { "name": "Python Fundamentals", 
+          "link": "https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/849842/original/Ashish_Sureshbhai_Pipaliya20220308-18489-1c1sflr.jpg", 
+          "iframe":"",
+          "platform_icon": "https://d1fdloi71mui9q.cloudfront.net/wpmuQ3EaRHeEFgOMOaJQ_convert.png",
+          "platform": "Great Learning"
+        },
+        { "name": "Python For Data Science", 
+          "iframe":"https://courses.cognitiveclass.ai/certificates/993c983d36654b1086b2cbd9e2105d40",
+          "platform_icon": "https://sn-portals-cognitiveclass.s3.us-south.cloud-object-storage.appdomain.cloud/644bcxng43h754iyqftkagb7aen1",
+          "platform": "Cognitiveclass"
+        },
+        { "name": "Data Visualization With PowerBI", 
+          "link": "https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/3393123/original/Ashish_Sureshbhai_Pipaliya20230924-73-1y628h9.jpg", 
+          "iframe":"",
+          "platform_icon": "https://d1fdloi71mui9q.cloudfront.net/wpmuQ3EaRHeEFgOMOaJQ_convert.png",
+          "platform": "Great Learning"
+        },
+        { "name": "Introduction to Data Science", 
+          "link": "", 
+          "iframe":"https://drive.google.com/uc?export=view&id=11aPgN8H9W5nqKOeQjWFWroZCVEO9pBWO",
+          "platform_icon": "https://is2-ssl.mzstatic.com/image/thumb/Purple115/v4/54/17/94/54179444-aa7e-65b9-49f1-6517463659fe/source/512x512bb.jpg",
+          "platform": "Infosys Springboard"
+        },
+        { "name": "Probability and Statistics using Python", 
+          "link": "", 
+          "iframe":"https://drive.google.com/file/d/11cdfiURLISD8vQ9bc1dUZ_FCItDX9wos/view?usp=sharing",
+          "platform_icon": "https://is2-ssl.mzstatic.com/image/thumb/Purple115/v4/54/17/94/54179444-aa7e-65b9-49f1-6517463659fe/source/512x512bb.jpg",
+          "platform": "Infosys Springboard"
+        },
+
+    ],
+    "skills": [
+        {
+            "category": "programming",
+            "items": [
+                { "name": "Python", "icon": "https://img.icons8.com/ios-filled/48/000000/python.png" },
+                { "name": "SQL", "icon": "https://img.icons8.com/ios-filled/48/000000/sql.png" },
+                { "name": "Java", "icon": "https://img.icons8.com/ios-filled/48/000000/java-coffee-cup-logo.png" },
+                { "name": "C", "icon": "https://img.icons8.com/?size=100&id=66724&format=png&color=1A1A1A" },
+                { "name": "C++", "icon": "https://img.icons8.com/ios-filled/48/000000/c-plus-plus-logo.png" },
+                { "name": "React Native", "icon": "https://img.icons8.com/ios-filled/48/000000/react-native.png" },
+                { "name": "HTML", "icon": "https://img.icons8.com/ios-filled/48/000000/html-5.png" },
+                { "name": "CSS", "icon": "https://img.icons8.com/ios-filled/48/000000/css3.png" },
+                { "name": "JavaScript", "icon": "https://img.icons8.com/ios-filled/48/000000/javascript.png" },
+                { "name": "PHP", "icon": "https://img.icons8.com/ios-filled/48/000000/php.png" }
+            ]
+        },
+        {
+            "category": "machine-learning",
+            "items": [
+                { "name": "Data Pre-Processing", "icon": "https://img.icons8.com/ios-filled/48/000000/data-configuration.png" },
+                { "name": "Deep Learning", "icon": "https://img.icons8.com/external-becris-lineal-becris/50/external-deep-learning-artificial-intelligence-becris-lineal-becris.png" },
+                { "name": "NLP", "icon": "https://img.icons8.com/ios-filled/48/000000/speech-bubble.png" },
+                { "name": "Computer Vision", "icon": "https://img.icons8.com/?size=48&id=YNoETM4GGoUU&format=png&color=1A1A1A" },
+                { "name": "Statistics", "icon": "https://img.icons8.com/ios-filled/48/000000/statistics.png" }
+            ]
+        },
+        {
+            "category": "tools",
+            "items": [
+                { "name": "Power BI", "icon": "https://img.icons8.com/?size=100&id=QMTbsd0FVhHS&format=png&color=1A1A1A" },
+                { "name": "Tableau", "icon": "https://img.icons8.com/ios-filled/48/000000/tableau-software.png" },
+                { "name": "MS Office", "icon": "https://img.icons8.com/?size=100&id=117062&format=png&color=1A1A1A" },
+                { "name": "Looker Studio", "icon": "https://img.icons8.com/ios-filled/48/000000/dashboard.png" },
+                { "name": "Power Automate", "icon": "https://img.icons8.com/fluency/48/microsoft-power-automate-2020.png" },
+                { "name": "Google Analytics", "icon": "https://img.icons8.com/?size=128&id=ZSt7LSFvNpZG&format=png" },
+                { "name": "Google BigQuery", "icon": "https://img.icons8.com/ios-filled/48/000000/database.png" }
+            ]
+        },
+        {
+            "category": "soft-skills",
+            "items": [
+                { "name": "Analytical Skills", "icon": "https://img.icons8.com/?size=100&id=xYlFNxNeJAzA&format=png" },
+                { "name": "Problem Solving", "icon": "https://img.icons8.com/?size=128&id=yku81UQEXoew&format=png" },
+                { "name": "Leadership", "icon": "https://img.icons8.com/ios-filled/48/000000/leadership.png" },
+                { "name": "Decision Making", "icon": "https://img.icons8.com/ios-filled/48/000000/decision.png" },
+                { "name": "Observing", "icon": "https://img.icons8.com/?size=100&id=113885&format=png" },
+                { "name": "Market Research", "icon": "https://img.icons8.com/?size=100&id=57711&format=png" }
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "main_image": {
+                "images": [
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Diamond-price-prediction.jpg"
+                ]
+            },
+            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Diamond-price-prediction.jpg",
+            "projectLink": "",
+            "MediaLink": "https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+            "title": "Diamond Price Prediction",
+            "year": 2024,
+            "category": "data",
+            "purpose": "Build an algorithm to predict diamond prices based on current market price and demand.",
+            "technologies": "Python, Flask, Machine Learning (Decision Tree) ,HTML, CSS, JS",
+            "description": "This algorithm predicts diamond prices using a human-like thought process, analyzing past and market data to save time on repetitive analysis of 37,000 diamond criteria."
+        },
+        {
+            "main_image": {
+                "images": [
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/browser-extensions.png"
+                ]
+            },
+            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/browser-extensions.png",
+            "projectLink": "https://www.w3schools.com",
+            "MediaLink": "https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+            "title": "Web Browser Extensions",
+            "year": 2024,
+            "category": "automation",
+            "purpose": "Reduce manual searching by highlighting key data on websites.",
+            "technologies": "Java, JavaScript",
+            "description": "Automatically highlights important details during website research, saving time for users."
+        },
+        {
+            "main_image": {
+                "images": [
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/webscraper-logo-header.png"
+                ]
+            },
+            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/webscraper-logo-header.png",
+            "projectLink": "https://www.w3schools.com",
+            "MediaLink": "https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+            "title": "Scraping and Automation",
+            "year": 2024,
+            "category": "automation",
+            "purpose": "Automate data scraping and formatting for faster decision-making.",
+            "technologies": "Python (Selenium, BeautifulSoup, HTML, CSS, JS, Excel, PyGui, Macros)",
+            "description": "Scrapes data from websites, formats it in Excel, and performs automated analysis to deliver concise decision-making insights."
+        },
+        {
+            "main_image": {
+                "images": [
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Twitter-Sentiment-Analysis-1.png"
+                ]
+            },
+            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Twitter-Sentiment-Analysis-1.png",
+            "projectLink": "https://www.w3schools.com",
+            "MediaLink": "https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+            "title": "Twitter Sentiment Analysis",
+            "year": 2023,
+            "category": "data",
+            "purpose": "Analyze public sentiment on state government and opposition parties.",
+            "technologies": "Python (Selenium), NLP, Excel",
+            "description": "Provides insights into public opinions on government policies and schemes using sentiment analysis."
+        },
+        {
+            "main_image": {
+                "images": [
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Uber-Thumbnail.jpg"
+                ]
+            },
+            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Uber-Thumbnail.jpg",
+            "projectLink": "https://www.w3schools.com",
+            "MediaLink": "https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+            "title": "Uber Ride Predictive Modelling",
+            "year": 2023,
+            "category": "data",
+            "purpose": "Research Uber ride cancellation prediction and fare estimation.",
+            "technologies": "Python, Power BI, Java",
+            "description": "Utilizes exploratory data analysis and machine learning (linear regression, logistic regression, gradient boosting, decision trees) to build predictive models. Presented at IACIDS '23."
+        },
+        {
+            "main_image": {
+                "images": [
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135055.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135122.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135154.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135305.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135330.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135345.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135443.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135451.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135353.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/COMP-CUBE/user-app/Screenshot 2025-05-31 135511.png",
+                ]
+            },
+            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Logo.jpg",
+            "projectLink": "https://github.com/ap-707/Complaint-Cube.git",
+            "MediaLink": "https://drive.google.com/drive/folders/15qBzl4ugb9pcDdY0A9qDoqxpTNJ0fB_S?usp=drive_link",
+            "title": "Complaint Cube",
+            "year": 2022,
+            "category": "mobile",
+            "purpose": "Mobile app to address local community issues.",
+            "technologies": "React Native, PHP, MySQL, Java",
+            "description": "A React Native app enabling users to report community problems efficiently, with PHP and MySQL for seamless data management."
+        },
+        {
+            "main_image": {
+                "images": [
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Company sales.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Inventory vs sale.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI//Monthly performance.png",
+                ]
+            },
+            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Company sales.png",
+            "projectLink": "",
+            "MediaLink": "",
+            "title": "PowerBI Dashboard",
+            "year": '2023-2024',
+            "category": "data",
+            "purpose": "Inventory Management, Sales Tracking and Production Control, Monthly Performance & Evaluation",
+            "technologies": "PowerBI , SQL, Python",
+            "description": " </br><strong>Monthly Performance Dashboard:</strong> </br>This dashboard shows monthly performance of different product categories. By visualizing trends, highlighting high-performing categories and monthly growth, it helps decision-makers to make data-driven decisions. Key features include dynamic filters, trend analysis, and year-to-date comparisons. </br></br><strong>Inventory vs Sales Dashboard:</strong></br> The Inventory vs Sales dashboard helps in balancing between stock levels and sales performance. It highlights understocked or overstocked products and identifies items with low sales velocity. This enables better inventory planning, reduces holding costs, and minimizes lost sales opportunities. The dashboard includes visual cues for critical stock alerts, sales-to-inventory ratios, and actionable insights. </br></br> <strong>Company Sales Dashboard:</strong> </br> This dashboard focuses on analyzing sales distribution by company or client. It provides a breakdown of which companies purchased which products, the volume of sales, and purchasing trends over time and monitoring their buying patterns."
+        }
+    ],
+    "companies": [
+        {
+            "name": "Hare Krishna Exports Pvt. Ltd.",
+            "link": "https://www.hk.co/",
+            "logo": "https://play-lh.googleusercontent.com/asd-BDb9GoFwRAZipl5Nyss9w5P0SI9gt1IBWglNXA4UdFi-TDfms8npqrXuBxYKFPTS",
+            "role": "Data Analyst",
+            "location": "Surat, Gujarat",
+            "duration": "Feb 2025 - Present",
+            "type": "Full-Time",
+            "about": "<strong>Harekrishna Exports Pvt. Ltd. (HK)</strong> is a Surat­-based, family‑run jewellery & diamond manufacturing and exporting company. Producing over 500,000 carats annually and serving 80+ countries, HK is celebrated for its vertically integrated, fair‑pricing model and state‑of‑the‑art solar‑powered facilities .",
+            "responsibility": "Control Production & Sales, Inventory & Sales analysis, Dashboards and PowerBI reports,Automation and Process Analysis.",
+            "contribution": "Worked on multiple self-initiated data science, automation, and AI/ML-based projects under personal branding. Developed tools and solutions that have been deployed in academic, professional, and personal environments.",
+            "impact": ""
+        },
+        {
+            "name": "Aviansoft Pvt.",
+            "link": "https://aviansoft.in/",
+            "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrEfStO5RX0YgFYAtIS8Hie9De7_75W_PjDA&s",
+            "role": "Data Analyst",
+            "location": "Surat, Gujarat",
+            "duration": "Oct 2024 - Feb 2025",
+            "type": "Full-Time",
+            "about": "<strong>AvianSoft</strong> is a Surat-based software development company specializing in customized business solutions with a strong focus on innovation, efficiency, and client-centric delivery.",
+            "responsibility": "R&D on Lattest Automotive Industries, Data Scraping, Google Analytics and Create Automation.",
+            "contribution": "Created an Automated Data scraping tool that collects Data from various Automotive websites, established Google Analytics on the company’s Website to track user behaviour on the company’s website.",
+            "impact": "Through Google Analytics, we were able to modify the website’s UI/UX for traffic."
+        },
+        {
+            "name": "K. Girdharlal International Pvt. Ltd.",
+            "link": "https://www.kgirdharlal.com/",
+            "logo": "https://res.cloudinary.com/kgdiamonds/image/upload/v1625656015/logo/37_footer.png",
+            "role": "Data Analyst",
+            "location": "Surat, Gujarat",
+            "duration": "Jan 2024 - Aug 2024",
+            "type": "Full-Time",
+            "about": "<strong>K. Girdharlal International Pvt. Ltd.</strong> is a fourth‑generation, India‑based diamond manufacturer, globally active, with strong roots in ethical practices and sustainability including carbon‑neutral goals, green building certification, and community initiatives.",
+            "responsibility": "Market Research, Automation, Web Scraping & Creating Diamond Price Prediction Algorithms.",
+            "contribution": "Creating Automated reporting tools & processes, Web scraper, and Data Analysis through Power BI.",
+            "impact": "Optimised pricing strategies for increased profitability, customer attraction, and market reach by adapting to trends and reducing decision-making time by 30%."
+        },
+        {
+            "name": "AIGGPA",
+            "link": "https://aiggpa.mp.gov.in/",
+            "logo": "https://static.mygov.in/saas/s3fs-saas/mp/mygov_16501129081531683.jpg",
+            "role": "Data Analyst Intern",
+            "location": "Bhopal, Madhya Pradesh",
+            "duration": "Jul 2023 - Aug 2023",
+            "type": "Internship",
+            "about": "<strong>Atal Bihari Vajpayee Institute of Good Governance and Policy Analysis (AIGGPA)</strong>, Bhopal is a government‑run think tank and training institute in Madhya Pradesh, established in 2007 (renamed in 2014). It drives evidence-based policymaking through data analytics, evaluation, and capacity-building initiatives.",
+            "responsibility": "Analyse people's perspectives towards political parties through social media and reporting.",
+            "contribution": "Collected data using web scraping and analysed public sentiment towards political parties using NLP.",
+            "impact": "Identified ineffective policies and developed alternative solutions, analysed the political landscape and the probability of which party will be the next government."
+        }
+    ]
+}
+
+// GSAP Animations
+gsap.from("#home h1, #home p, #home a", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    stagger: 0.3,
+    ease: "power3.out"
+});
+
+gsap.from("#about img, #about p, #about a", {
+    scrollTrigger: "#about",
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power3.out"
+});
+
+gsap.from(".certificate-card", {
+    scrollTrigger: "#certificate",
+    opacity: 0,
+    y: 20,
+    duration: 0.8,
+    stagger: 0.05,
+    ease: "power3.out"
+});
+
+gsap.from(".skill-card", {
+    scrollTrigger: "#skills",
+    opacity: 0,
+    y: 20,
+    duration: 0.8,
+    stagger: 0.05,
+    ease: "power3.out"
+});
+
+gsap.from(".project-card", {
+    scrollTrigger: "#projects",
+    opacity: 0,
+    y: 0,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: "power3.out"
+});
+
+gsap.from(".experience-card", {
+    scrollTrigger: "#experience",
+    opacity: 0,
+    y: 0,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: "power3.out"
+});
+
+// Skill Filter
+function toggleDetails(index) {
+    const detailSection = document.getElementById(`details-${index}`);
+    detailSection.classList.toggle('hidden');
+}
+
+// Company cards
+function generateCompanyExperienceHTML(companies) {
+    return companies.map(company => {
+        return `
+                <div class="experience-card bg-gray-50 shadow-md rounded-lg p-4 mb-6 cursor-pointer" onclick="toggleDetails(this)">
+
+                    <!-- Top Row (Logo + Info + Arrow) -->
+                    <div class="flex items-center justify-between space-x-6">
+                    
+                        <!-- Left: Logo + Company Info -->
+                        <div class="flex items-center space-x-6">
+                            <div class="w-20 h-20 bg-white rounded-full overflow-hidden border border-gray-300 flex-shrink-0">
+                                <img src="${company.logo}" alt="${company.name} logo" class="w-full h-full object-contain p-2">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 hover:underline">
+                                    <a href="${company.link}">${company.name}</a>
+                                </h3>
+                                <p class="text-md text-gray-600 font-medium">${company.role} - ${company.type}</p>
+                                <p class="text-sm text-gray-500">${company.duration}</p>
+                            </div>
+                        </div>
+
+                        <!-- Right: Toggle Arrow -->
+                        <button class="doropdown_arrow min-h-10 max-h-10 min-w-10 max-w-10 transform transition-transform duration-300 ease-in-out">
+                            <img src="https://img.icons8.com/?size=50&id=2760&format=png"
+                                alt="See Details"
+                                class="w-10 h-10 object-contain p-2 cursor-pointer" />
+                        </button>
+                    </div>
+
+                    <!-- Animated Expandable Section -->
+                    <div class="company-details">
+                        ${company.about ? `<p class="text-sm text-gray-700 mt-4 px-1 py-1"><strong>About:</strong><br/>${company.about}</p>` : ''}
+                        ${company.responsibility ? `<p class="text-sm text-gray-700 mt-2 px-1 pb-1"><strong>Responsibility:</strong><br/>${company.responsibility}</p>` : ''}
+                        ${company.contribution ? `<p class="text-sm text-gray-700 mt-2 px-1 pb-1"><strong>Contribution:</strong><br/>${company.contribution}</p>` : ''}
+                        ${company.impact ? `<p class="text-sm text-gray-700 mt-2 px-1 pb-1"><strong>Impact:</strong><br/>${company.impact}</p>` : ''}
+                    </div>
+                </div>
+                `;
+    }).join("");
+}
+
+// Insert into section with id="experience"
+const experienceHTML = generateCompanyExperienceHTML(data.companies);
+document.querySelector('#experience .max-w-7xl').insertAdjacentHTML('beforeend', experienceHTML);
+
+function toggleDetails(button) {
+    const card = button.closest('.experience-card');
+    const details = card.querySelector('.company-details');
+    const img = button.querySelector('.doropdown_arrow');
+
+    // Toggle max-height animation
+    details.classList.toggle('open');
+
+    // Toggle arrow rotation
+    img.classList.toggle('rotate-180');
+}
+
+
+
+// ===========================================================
+// Certificate model 
+function openModal(certi) {
+    const modal = document.getElementById('imageModal');
+    const modalContent = document.getElementById('modalContent');
+    const loader = document.getElementById('modalLoader');
+
+    // loader.classList.remove('hidden');
+
+    // Clear previous content
+    modalContent.innerHTML = '';    
+
+    if (certi.link) {
+        // Show image certificate
+        modalContent.innerHTML = `
+            <div id="modalContent" class="w-full h-fit max-h-[90vh] rounded-md overflow-hidden">
+                <img src="${certi.link}" alt="Certificate" class="w-full h-fit rounded-md"/>
+            </div>
+        `;
+    } else if (certi.iframe) {
+        // Show iframe-based certificate
+        modalContent.innerHTML = `
+            <div id="modalContent" class="w-full h-[90vh] max-h-[90vh] rounded-md overflow-hidden">
+                <iframe src="${certi.iframe}" class="w-full h-full rounded-md border-0" frameborder="0"></iframe>
+            </div>
+        `;
+    } else {
+        // Fallback content
+        modalContent.innerHTML = `
+            <p class="text-red-500 text-center font-semibold">Certificate not available</p>
+        `;
+    }
+
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+}
+
+
+
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
+}
+
+// certificate-Cards
+function generateCertiHTML(Certificates) {
+    return Certificates.map(certi => {
+        const certiData = JSON.stringify(certi).replace(/"/g, '&quot;'); // escape quotes
+        return `
+            <div onclick="openModal(JSON.parse('${certiData}'))"
+                class="certificate-card group py-[10px] pl-[30px] pr-[10px] flex w-fit items-center space-x-4 justify-between bg-gray-100 rounded-[50px] opacity-100 hover:bg-gray-200 font-bold text-lg cursor-pointer">
+
+                <div class="flex flex-col">
+                    <span class="text-base font-semibold">${certi.name}</span>
+                </div>
+
+                <div class="certi-icon rounded-full w-8 h-8 transition-transform duration-300 ease-in-out group-hover:scale-125">
+                    <img src="${certi.platform_icon}" alt="icon"
+                        class="certi-icon rounded-full w-8 h-8 transition-transform duration-300 ease-in-out" />
+
+                    <!-- Tooltip -->
+                    <div class="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 mb-1 hidden group-hover:block 
+                                bg-gray-500 text-white text-xs rounded py-1 px-2 whitespace-nowrap z-10">
+                        ${certi.platform}
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join("");
+}
+
+const CertificatesHTML = generateCertiHTML(data.Certificates);
+document.querySelector('.certificate-grid').innerHTML = CertificatesHTML;
+
+
+
+// ===========================================================
+// skills-Cards
+function generateSkillsHTML(skills) {
+    return skills.map(skill => {
+        return skill.items.map(item => {
+            return `
+                        <div class="skill-card p-4 flex items-center space-x-3" data-category="${skill.category}">
+                        <img src="${item.icon}" alt="${item.name}" class="skill-icon">
+                        <p class="text-sm font-semibold text-gray-800">${item.name}</p>
+                        </div>
+                    `;
+        }).join("");
+    }).join("");
+}
+
+const skillsHTML = generateSkillsHTML(data.skills);
+document.querySelector('.skill-grid').innerHTML = skillsHTML;
+
+// ======================================================================================
+
+// Project-cards
+function generateProjectsHTML(projects) {
+    const isMobile = window.innerWidth < 768;
+
+    const container = isMobile
+        ? document.querySelector(".project-grid-mobile")
+        : document.querySelector(".project-grid-desktop");
+
+    container.innerHTML = "";
+
+    projects.forEach((project, index) => {
+        const card = document.createElement("a");
+        card.className = `${isMobile ? "w-[80%] flex-shrink-0" : "project-card bg-white p-4 max-w-[350px] rounded-xl shadow-md snap-start"}`;
+        card.setAttribute("data-category", project.category);
+        card.setAttribute("data-index", index);
+
+        card.innerHTML = `
+            <img src="${project.image}" alt="${project.title} image"
+                class="w-full h-40 object-cover rounded-md mb-2" />
+            <h3 class="text-lg font-semibold text-gray-800 text-center">${project.title}</h3>
+        `;
+
+        card.addEventListener("click", () => {
+            showProjectModal(project);
+        });
+
+        container.appendChild(card);
+    });
+}
+
+
+
+function showProjectModal(project) {
+    const modal = document.getElementById("projectModal");
+    const modalContent = document.getElementById("modalContent");
+
+    modalContent.innerHTML = `
+            <div class="flex flex-col md:flex-row gap-4">
+                <!-- Left: Horizontal Scrollable Images -->
+                
+                <div class="overflow-x-auto whitespace-nowrap md:w-1/2 max-h-[430px] flex items-center rounded-lg">
+                    ${project.main_image?.images?.map(img =>
+                        `<img src="${img}" alt="${project.title}" class="inline-block h-full w-auto mr-2 object-contain" />`
+                        ).join("") || ""
+                    }
+                </div>  
+
+                <!-- Right: Project Details -->
+                <div class="md:w-1/2 overflow-y-scroll max-h-[430px]">
+                    <div class="flex items-center mb-2">
+                        <h2 class="text-2xl font-bold mr-2">${project.title} (${project.year})</h2>
+                        <a href="${project.projectLink}"><img src="https://img.icons8.com/?size=100&id=FxJPExPJFHZ9&format=png" alt="Link" class="skill-icon w-6 h-6" /></a>
+                    </div>
+                    <p class="mb-2 text-gray-700"><strong>Purpose:</strong><br/> ${project.purpose || "N/A"}</p>
+                    <p class="mb-2 text-gray-700"><strong>Technologies:</strong><br/> ${project.technologies || "N/A"}</p>
+                    <p class="mb-4 text-gray-700"><strong>Description:</strong> ${project.description || "No description available."}</p>
+                </div>
+            </div>
+            `;
+
+    modal.classList.remove("hidden");
+}
+
+
+// Generate HTML elements for projects and add them to the project-grid
+generateProjectsHTML(data.projects);
+
+// Close modal
+document.getElementById("closeModal").addEventListener("click", () => {
+    document.getElementById("projectModal").classList.add("hidden");
+});
+
+// ======================================================================================
+const skillFilterButtons = document.querySelectorAll('#skills .filter-btn');
+const skillCards = document.querySelectorAll('.skill-card');
+
+skillFilterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Update button styles
+        skillFilterButtons.forEach(btn => {
+            btn.classList.remove('bg-blue-600', 'text-white');
+            btn.classList.add('bg-gray-200', 'text-gray-800');
+        });
+        button.classList.remove('bg-gray-200', 'text-gray-800');
+        button.classList.add('bg-blue-600', 'text-white');
+
+        // Filter skills
+        const filter = button.getAttribute('data-filter');
+        skillCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                card.style.display = 'flex';
+                gsap.fromTo(card, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 });
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+
+// Project Filter
+const projectFilterButtons = document.querySelectorAll('#projects .filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+projectFilterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Update button styles
+        projectFilterButtons.forEach(btn => {
+            btn.classList.remove('bg-blue-600', 'text-white');
+            btn.classList.add('bg-gray-200', 'text-gray-800');
+        });
+        button.classList.remove('bg-gray-200', 'text-gray-800');
+        button.classList.add('bg-blue-600', 'text-white');
+
+        // Filter projects
+        const filter = button.getAttribute('data-filter');
+        projectCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                card.style.display = 'block';
+                gsap.fromTo(card, { opacity: 0, y: 0 }, { opacity: 1, y: 0, duration: 0.5 });
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+
+// Ensure all project cards are visible on initial load
+window.addEventListener('load', () => {
+    projectCards.forEach(card => {
+        card.style.display = 'block';
+        gsap.set(card, { opacity: 1, y: 0 });
+    });
+});

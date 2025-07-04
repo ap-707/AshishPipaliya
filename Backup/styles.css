@@ -1,0 +1,62 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.scroll-smooth {
+    scroll-behavior: smooth;
+}
+
+.company-details {
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.company-details.open {
+    max-height: 1000px;
+}
+
+.skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.certificate-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+.skill-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.filter-btn {
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-grid-mobile::-webkit-scrollbar {
+    display: none;
+}
+.project-grid-mobile {
+    -ms-overflow-style: none;  /* IE */
+    scrollbar-width: none;     /* Firefox */
+}
