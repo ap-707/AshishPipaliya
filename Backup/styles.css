@@ -23,6 +23,12 @@ body {
     border-radius: 8px;
 }
 
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-color: #93c5fd;
+}
+
 .certificate-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: #f9fafb;
@@ -51,12 +57,4 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
-}
-
-.project-grid-mobile::-webkit-scrollbar {
-    display: none;
-}
-.project-grid-mobile {
-    -ms-overflow-style: none;  /* IE */
-    scrollbar-width: none;     /* Firefox */
 }
