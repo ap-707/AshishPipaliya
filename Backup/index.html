@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="overflow-x-hidden">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,10 +7,10 @@
     <title>Ashish Pipaliya - Data Analyst Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@500;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M3P9L931NE"></script>
@@ -23,7 +23,7 @@
     </script>
 </head>
 
-<body class="bg-gray-50 text-gray-800 scroll-smooth overflow-x-hidden">
+<body class="bg-gray-50 text-gray-800 scroll-smooth">
     <!-- Navigation -->
     <!-- <nav class="bg-white shadow-lg fixed w-full z-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,11 +47,12 @@
         </div>
     </nav> -->
 
+
     <!-- Navigation -->
     <nav class="bg-white shadow-lg fixed w-full z-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
-                <!-- Brand -->
+                <!-- My Name -->
                 <h1 class="text-2xl font-bold text-blue-600 font-poppins">Ashish Pipaliya</h1>
 
                 <!-- Desktop Menu -->
@@ -95,6 +96,7 @@
     </nav>
 
 
+
     <!-- Hero Section -->
     <section id="home"
         class="pt-24 pb-20 bg-gradient-to-br from-blue-600 to-purple-700 text-white relative bg-cover bg-center opacity-95 shadow-[inset_0_4px_6px_rgba(0,0,0,0.3)]"
@@ -131,10 +133,15 @@
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-2/3" style="width: 100%;">
                     <p class="text-lg text-gray-700 leading-relaxed">
-                        I'm a passionate data analyst with a year of experience in uncovering insights from complex
-                        datasets. Skilled in Python, SQL, Power BI, and Google Analytics, I specialize in process
-                        automation and data-driven decision-making. My goal is to transform raw data into strategic
-                        solutions that drive business success.
+                        Detail-oriented Data Analyst with <span id="experience_duration"
+                            class="font-semibold text-black">a year</span> of experience in transforming raw data into
+                        actionable insights.
+                        Proficient in Python, SQL, Power BI, and Google Analytics, with a strong foundation in data
+                        preprocessing, automation, and predictive modeling.
+                        Experienced in building dynamic dashboards, optimizing pricing strategies, and conducting market
+                        and policy research using advanced analytics, NLP, and machine learning techniques.
+                        Passionate about leveraging data to support strategic decisions and improve operational
+                        efficiency.
                     </p>
                     <a href="#projects" class="mt-6 inline-block text-blue-600 font-semibold hover:underline">Explore My
                         Work</a>
@@ -143,7 +150,7 @@
         </div>
     </section>
 
-    <!-- Certificate Section -->
+    <!-- Certificate Section NEW -->
 
     <section id="certificate" class="py-10 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -152,15 +159,19 @@
             <!-- Certificate Image Modal -->
             <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-60">
                 <!-- <div class="bg-white p-4 max-w-[50%] h-auto rounded-lg max-w-3xl relative"> -->
-                <div class="bg-white p-4 w-[95vw] h-fit max-h-[90vh] sm:w-[90vw] sm:h-auto max-w-6xl rounded-lg relative overflow-hidden">
-                    
+                <div
+                    class="bg-white p-4 w-[95vw] h-fit max-h-[90vh] sm:w-[90vw] sm:h-auto max-w-6xl rounded-lg relative overflow-hidden">
+
                     <button onclick="closeModal()"
                         class="absolute top-2 right-2 text-2xl leading-none font-bold text-white bg-red-500 hover:bg-red-600 rounded-md px-3 py-1 shadow-md">&times;</button>
-                        
+
                     <div id="modalContent" class="w-full h-fit max-h-[90vh] rounded-md overflow-hidden">
 
-                        <div id="modalLoader" class="absolute inset-0 flex items-center justify-center bg-white bg-opacity-80 z-10 hidden">
-                            <div class="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                        <div id="modalLoader"
+                            class="absolute inset-0 flex items-center justify-center bg-white bg-opacity-80 z-10 hidden">
+                            <div
+                                class="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin">
+                            </div>
                         </div>
                     </div>
 
@@ -209,7 +220,6 @@
                     class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-semibold hover:bg-gray-300 transition"
                     data-filter="soft-skills">Soft Skills</button>
             </div>
-
             <!-- Skill Grid -->
             <div class="skill-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
 
@@ -239,8 +249,7 @@
                     class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-semibold hover:bg-gray-300 transition"
                     data-filter="automation">Automation</button>
             </div>
-
-            <div class="project-grid-wrapper">
+            <div class="project-grid">
                 <!-- Modal -->
                 <div id="projectModal"
                     class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
@@ -255,14 +264,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-grid-mobile md:hidden flex overflow-x-auto space-x-4 px-2 snap-x snap-mandatory">
-                    <!-- Project cards injected by JS on mobile -->
-                </div>
-
-                <!-- Desktop/Tablet: normal grid layout -->
-                <div class="project-grid-desktop hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Project cards injected by JS on desktop/tablet -->
-                </div>
+                <!-- Projects will be dynamically added here -->
             </div>
         </div>
     </section>
@@ -302,6 +304,8 @@
                     href="https://icons8.com/"><u>icon8</u></a></p>
         </div>
     </footer>
+
+
 
     <script src="script.js"></script>
 
