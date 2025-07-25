@@ -187,10 +187,15 @@
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-2/3" style="width: 100%;">
                     <p class="text-lg text-gray-700 leading-relaxed">
-                        I'm a passionate data analyst with a year of experience in uncovering insights from complex
-                        datasets. Skilled in Python, SQL, Power BI, and Google Analytics, I specialize in process
-                        automation and data-driven decision-making. My goal is to transform raw data into strategic
-                        solutions that drive business success.
+                        Detail-oriented Data Analyst with <span id="experience_duration"
+                            class="font-semibold text-black">a year</span> of experience in transforming raw data into
+                        actionable insights.
+                        Proficient in Python, SQL, Power BI, and Google Analytics, with a strong foundation in data
+                        preprocessing, automation, and predictive modelling.
+                        Experienced in building dynamic dashboards, optimising pricing strategies, and conducting market research
+                        and policy research using advanced analytics, NLP, and machine learning techniques.
+                        Passionate about leveraging data to support strategic decisions and improve operational
+                        efficiency.
                     </p>
                     <a href="#projects" class="mt-6 inline-block text-blue-600 font-semibold hover:underline">Explore My
                         Work</a>
@@ -636,7 +641,44 @@
             stagger: 0.2,
             ease: "power3.out"
         });
+// -----------------------------------------------------------------------------------------------------
+// Count Experience duration
+function getLastDateOfMonth(date) {
+    return new Date(date.getFullYear(), date.getMonth() + 1, 0);
+}
 
+function getTotalExperienceDuration(companies) {
+    let totalMonths = 0;
+    const now = new Date();
+
+    companies.forEach(company => {
+        let [startStr, endStr] = company.duration.split(" - ").map(s => s.trim());
+        const startDate = new Date(`01 ${startStr}`);
+        const endDate = endStr.toLowerCase() === "present" ? getLastDateOfMonth(now) : getLastDateOfMonth(new Date(`15 ${endStr}`));
+
+        // console.log(startDate , " and ", endDate);
+        const days = (endDate - startDate) / (1000 * 60 * 60 * 24);
+        const months = Math.round(days / 30);
+        totalMonths = totalMonths + months;
+    });
+
+    const yearsDone = Math.floor(totalMonths / 12);
+    const monthsDone = totalMonths % 12;
+
+    const Ytext = yearsDone > 1 ? " years " : " year ";
+    const Mtext = monthsDone > 1 ? " months " : " month ";
+
+    if (monthsDone == 0) {
+        return yearsDone + Ytext;
+    } else {
+        return yearsDone + Ytext + ' and ' + monthsDone + Mtext;
+    }
+
+}
+
+document.querySelector("#experience_duration").textContent = getTotalExperienceDuration(data.companies);
+
+// -----------------------------------------------------------------------------------------------------
         // Skill Filter
         function toggleDetails(index) {
             const detailSection = document.getElementById(`details-${index}`);
