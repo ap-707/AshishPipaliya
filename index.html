@@ -147,8 +147,7 @@
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-2/3" style="width: 100%;">
                     <p class="text-lg text-gray-700 leading-relaxed">
-                        Detail-oriented Data Analyst with <span id="experience_duration"
-                            class="font-semibold text-black">a year</span> of experience in transforming raw data into
+                        Detail-oriented Data Analyst with 1 year and 8 months of experience in transforming raw data into
                         actionable insights.
                         Proficient in Python, SQL, Power BI, and Google Analytics, with a strong foundation in data
                         preprocessing, automation, and predictive modelling.
@@ -602,41 +601,41 @@
             ease: "power3.out"
         });
 // -----------------------------------------------------------------------------------------------------
-// Count Experience duration
-function getLastDateOfMonth(date) {
-    return new Date(date.getFullYear(), date.getMonth() + 1, 0);
-}
+// // Count Experience duration
+// function getLastDateOfMonth(date) {
+//     return new Date(date.getFullYear(), date.getMonth() + 1, 0);
+// }
 
-function getTotalExperienceDuration(companies) {
-    let totalMonths = 0;
-    const now = new Date();
+// function getTotalExperienceDuration(companies) {
+//     let totalMonths = 0;
+//     const now = new Date();
 
-    companies.forEach(company => {
-        let [startStr, endStr] = company.duration.split(" - ").map(s => s.trim());
-        const startDate = new Date(`01 ${startStr}`);
-        const endDate = endStr.toLowerCase() === "present" ? getLastDateOfMonth(now) : getLastDateOfMonth(new Date(`30 ${endStr}`));
+//     companies.forEach(company => {
+//         let [startStr, endStr] = company.duration.split(" - ").map(s => s.trim());
+//         const startDate = new Date(`01 ${startStr}`);
+//         const endDate = endStr.toLowerCase() === "present" ? getLastDateOfMonth(now) : getLastDateOfMonth(new Date(`30 ${endStr}`));
 
-        // console.log(startDate , " and ", endDate);
-        const days = (endDate - startDate) / (1000 * 60 * 60 * 24);
-        const months = Math.round(days / 30);
-        totalMonths = totalMonths + months;
-    });
+//         // console.log(startDate , " and ", endDate);
+//         const days = (endDate - startDate) / (1000 * 60 * 60 * 24);
+//         const months = Math.round(days / 30);
+//         totalMonths = totalMonths + months;
+//     });
 
-    const yearsDone = Math.floor(totalMonths / 12);
-    const monthsDone = totalMonths % 12;
+//     const yearsDone = Math.floor(totalMonths / 12);
+//     const monthsDone = totalMonths % 12;
 
-    const Ytext = yearsDone > 1 ? " years " : " year ";
-    const Mtext = monthsDone > 1 ? " months " : " month ";
+//     const Ytext = yearsDone > 1 ? " years " : " year ";
+//     const Mtext = monthsDone > 1 ? " months " : " month ";
 
-    if (monthsDone == 0) {
-        return yearsDone + Ytext;
-    } else {
-        return yearsDone + Ytext + ' and ' + monthsDone + Mtext;
-    }
+//     if (monthsDone == 0) {
+//         return yearsDone + Ytext;
+//     } else {
+//         return yearsDone + Ytext + ' and ' + monthsDone + Mtext;
+//     }
 
-}
+// }
 
-document.querySelector("#experience_duration").textContent = getTotalExperienceDuration(data.companies);
+// document.querySelector("#experience_duration").textContent = getTotalExperienceDuration(data.companies);
 
 // -----------------------------------------------------------------------------------------------------
         // Skill Filter
