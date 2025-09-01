@@ -400,8 +400,8 @@ function generateCompanyExperienceHTML(companies) {
                         <img src="${company.logo}" alt="${company.name} logo" class="w-full h-full object-contain p-2">
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-gray-900 hover:underline">
-                            <a href="${company.link}">${company.name}</a>
+                        <h3 class="text-xl font-bold text-gray-900">
+                            <a href="${company.link}" class="hover:underline">${company.name}</a>  <span class="font-normal"> - ${company.location}</span>
                         </h3>
                         <p class="text-md text-gray-600 font-medium">${company.role} - ${company.type}</p>
                         <p class="text-sm text-gray-500">${company.start} - ${company.end}</p>
@@ -701,5 +701,6 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
 
 
