@@ -448,12 +448,6 @@ function toggleDetails(button) {
 
 // ===========================================================
 
- function openModal(imageSrc) {
-    document.getElementById('modalImage').src = imageSrc;
-    const modal = document.getElementById('imageModal');
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-}
 
 function closeModal() {
     const modal = document.getElementById('imageModal');
@@ -463,7 +457,7 @@ function closeModal() {
 
 // =======================================================================
 // Certificate script
-function openModal(certi) {
+function openCertificateModal(certi) {
     const modal = document.getElementById('imageModal');
     const modalContent = document.getElementById('modalContent');
     const loader = document.getElementById('modalLoader');
@@ -508,7 +502,7 @@ function generateCertiHTML(Certificates) {
         if (isMobile) {
             // For Mobile
             return `
-            <div onclick="openModal(JSON.parse('${certiData}'))"
+            <div onclick="openCertificateModal(JSON.parse('${certiData}'))"
                 class="certificate-card group py-[6px] pl-[15px] pr-[6px] flex w-fit items-center space-x-4 justify-between bg-gray-100 rounded-[50px] opacity-100 hover:bg-gray-200 font-bold text-lg cursor-pointer">
 
                 <div class="flex flex-col">
@@ -530,7 +524,7 @@ function generateCertiHTML(Certificates) {
         } else {
             // For Tablate or Windows
             return `
-            <div onclick="openModal(JSON.parse('${certiData}'))"
+            <div onclick="openCertificateModal(JSON.parse('${certiData}'))"
                 class="certificate-card group py-[10px] pl-[30px] pr-[10px] flex w-fit items-center space-x-4 justify-between bg-gray-100 rounded-[50px] opacity-100 hover:bg-gray-200 font-bold text-lg cursor-pointer">
 
                 <div class="flex flex-col">
@@ -580,8 +574,9 @@ document.querySelector('.skill-grid').innerHTML = skillsHTML;
 function generateProjectsHTML(projects) {
     const container = document.querySelector(".project-grid");
 
-    // Clear previous content except modal
-    container.innerHTML = container.querySelector("#projectModal").outerHTML;
+    // Preserve the modal but clear old cards
+    const modalHTML = container.querySelector("#projectModal").outerHTML;
+    container.innerHTML = modalHTML;
 
     // Append new cards
     projects.forEach((project, index) => {
@@ -591,7 +586,8 @@ function generateProjectsHTML(projects) {
         card.setAttribute("data-index", index);
 
         card.innerHTML = `
-            <img src="${project.image}" alt="${project.title} image" class="h-[90%] w-full object-cover object-center rounded-lg mb-1 mx-auto my-auto" />
+            <img src="${project.image}" alt="${project.title} image" 
+                 class="h-[90%] w-full object-cover object-center rounded-lg mb-1 mx-auto my-auto" />
             <h3 class="text-xl font-semibold text-gray-800 text-center">${project.title}</h3>
         `;
 
@@ -606,24 +602,25 @@ function generateProjectsHTML(projects) {
 
 function showProjectModal(project) {
     const modal = document.getElementById("projectModal");
-    const modalContent = document.getElementById("modalContent");
+    const modalContent = document.getElementById("projectModalContent"); // ✅ unique ID
 
     modalContent.innerHTML = `
     <div class="flex flex-col md:flex-row gap-4">
         <!-- Left: Horizontal Scrollable Images -->
-        
         <div class="overflow-x-auto whitespace-nowrap md:w-1/2 max-h-[430px] flex items-center rounded-lg">
             ${project.main_image?.images?.map(img =>
-        `<img src="${img}" alt="${project.title}" class="inline-block h-full w-auto mr-2 object-contain" />`
-    ).join("") || ""
-        }
+                `<img src="${img}" alt="${project.title}" class="inline-block h-full w-auto mr-2 object-contain" />`
+            ).join("") || ""}
         </div>  
 
         <!-- Right: Project Details -->
         <div class="md:w-1/2 overflow-y-scroll max-h-[430px]">
             <div class="flex items-center mb-2">
                 <h2 class="text-2xl font-bold mr-2">${project.title} (${project.year})</h2>
-                <a href="${project.projectLink}"><img src="https://img.icons8.com/?size=100&id=FxJPExPJFHZ9&format=png" alt="Link" class="skill-icon w-6 h-6" /></a>
+                <a href="${project.projectLink}" target="_blank">
+                    <img src="https://img.icons8.com/?size=100&id=FxJPExPJFHZ9&format=png" 
+                         alt="Link" class="skill-icon w-6 h-6" />
+                </a>
             </div>
             <p class="mb-2 text-gray-700"><strong>Purpose:</strong><br/> ${project.purpose || "N/A"}</p>
             <p class="mb-2 text-gray-700"><strong>Technologies:</strong><br/> ${project.technologies || "N/A"}</p>
@@ -635,12 +632,11 @@ function showProjectModal(project) {
     modal.classList.remove("hidden");
 }
 
-
 // Generate HTML elements for projects and add them to the project-grid
 generateProjectsHTML(data.projects);
 
 // Close modal
-document.getElementById("closeModal").addEventListener("click", () => {
+document.getElementById("closeProjectModal").addEventListener("click", () => {
     document.getElementById("projectModal").classList.add("hidden");
 });
 
