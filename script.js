@@ -70,7 +70,7 @@ const data = {
             "iframe": "",
             "pnglink" : "",
             "platform_icon": "https://christuniversity.in/images/emblem_logo.png",
-            "platform": "Great Learning"
+            "platform": "CHRIST (Deemed to be University)"
         },
         
     ],
@@ -719,6 +719,7 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
 
 
 
