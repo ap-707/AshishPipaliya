@@ -24,16 +24,19 @@ if (isDownloadable) {
 
 const data = {
     "Certificates": [
-        {
+         {
             "name": "Python Fundamentals",
             "link": "https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/849842/original/Ashish_Sureshbhai_Pipaliya20220308-18489-1c1sflr.jpg",
             "iframe": "",
+            "pnglink" : "",
             "platform_icon": "https://d1fdloi71mui9q.cloudfront.net/wpmuQ3EaRHeEFgOMOaJQ_convert.png",
             "platform": "Great Learning"
         },
         {
             "name": "Python For Data Science",
+            "link": "",
             "iframe": "https://courses.cognitiveclass.ai/certificates/993c983d36654b1086b2cbd9e2105d40",
+            "pnglink" : "",
             "platform_icon": "https://sn-portals-cognitiveclass.s3.us-south.cloud-object-storage.appdomain.cloud/644bcxng43h754iyqftkagb7aen1",
             "platform": "Cognitiveclass"
         },
@@ -41,20 +44,23 @@ const data = {
             "name": "Data Visualization With PowerBI",
             "link": "https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/3393123/original/Ashish_Sureshbhai_Pipaliya20230924-73-1y628h9.jpg",
             "iframe": "",
+            "pnglink" : "",
             "platform_icon": "https://d1fdloi71mui9q.cloudfront.net/wpmuQ3EaRHeEFgOMOaJQ_convert.png",
             "platform": "Great Learning"
         },
         {
             "name": "Introduction to Data Science",
-            "link": "https://drive.google.com/file/d/11aPgN8H9W5nqKOeQjWFWroZCVEO9pBWO/view?usp=drivesdk",
-            "iframe": "",
+            "link": "", //"https://drive.google.com/file/d/11aPgN8H9W5nqKOeQjWFWroZCVEO9pBWO/view?usp=drivesdk",
+            "iframe": "", // "https://drive.google.com/uc?export=view&id=11aPgN8H9W5nqKOeQjWFWroZCVEO9pBWO",
+            "pnglink" : "11aPgN8H9W5nqKOeQjWFWroZCVEO9pBWO",
             "platform_icon": "https://is2-ssl.mzstatic.com/image/thumb/Purple115/v4/54/17/94/54179444-aa7e-65b9-49f1-6517463659fe/source/512x512bb.jpg",
             "platform": "Infosys Springboard"
         },
         {
             "name": "Probability and Statistics using Python",
-            "link": "https://drive.google.com/file/d/11cdfiURLISD8vQ9bc1dUZ_FCItDX9wos/view?usp=drivesdk",
-            "iframe": "",
+            "link": "", // "https://drive.google.com/file/d/11cdfiURLISD8vQ9bc1dUZ_FCItDX9wos/view?usp=drivesdk",
+            "iframe": "", // "https://drive.google.com/file/d/11cdfiURLISD8vQ9bc1dUZ_FCItDX9wos/view?usp=sharing",
+            "pnglink" : "11cdfiURLISD8vQ9bc1dUZ_FCItDX9wos",
             "platform_icon": "https://is2-ssl.mzstatic.com/image/thumb/Purple115/v4/54/17/94/54179444-aa7e-65b9-49f1-6517463659fe/source/512x512bb.jpg",
             "platform": "Infosys Springboard"
         },
@@ -477,7 +483,14 @@ function openCertificateModal(certi) {
                 <iframe src="${certi.iframe}" class="w-full h-full rounded-md border-0"></iframe>
             </div>
         `;
-    } else {
+    } else if (certi.pnglink) {
+        modalContent.innerHTML = `
+            <div class="w-full h-[90vh] max-h-[90vh] rounded-md overflow-hidden">
+                <img src="https://lh3.googleusercontent.com/d/${certi.pnglink}" class="w-full h-full rounded-md border-0" alt="Certificate"></img>
+            </div>
+        `;
+    }
+     else {
         // Fallback content
         modalContent.innerHTML = `
             <p class="text-red-500 text-center font-semibold">Certificate not available</p>
@@ -697,6 +710,7 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
 
 
 
