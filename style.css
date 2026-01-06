@@ -32,6 +32,19 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-color: #93c5fd;
 }
+.secure-box {
+    user-select: none;
+    position: relative;
+}
+
+.secure-content {
+    pointer-events: none;
+}
+
+/* Blur on inspect */
+.secure-box.blur {
+    filter: blur(14px);
+}
 
 .certificate-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -62,3 +75,4 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
 }
+
