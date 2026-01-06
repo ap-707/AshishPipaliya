@@ -22,6 +22,8 @@ if (isDownloadable) {
     link.setAttribute("rel", "noopener noreferrer");
 }
 
+document.getElementById("year").textContent = new Date().getFullYear();
+
 const data = {
     "Certificates": [
          {
@@ -719,6 +721,7 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
 
 
 
