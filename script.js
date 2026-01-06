@@ -64,14 +64,14 @@ const data = {
             "platform_icon": "https://d1fdloi71mui9q.cloudfront.net/wpmuQ3EaRHeEFgOMOaJQ_convert.png",
             "platform": "Great Learning"
         },
-        {
-            "name": "Master’s Graduate in Data Science",
-            "link": "https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/3393123/original/Ashish_Sureshbhai_Pipaliya20230924-73-1y628h9.jpg",
-            "iframe": "",
-            "pnglink" : "",
-            "platform_icon": "https://christuniversity.in/images/emblem_logo.png",
-            "platform": "CHRIST (Deemed to be University)"
-        },
+        // {
+        //     "name": "Master’s Graduate in Data Science",
+        //     "link": "https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/3393123/original/Ashish_Sureshbhai_Pipaliya20230924-73-1y628h9.jpg",
+        //     "iframe": "",
+        //     "pnglink" : "",
+        //     "platform_icon": "https://christuniversity.in/images/emblem_logo.png",
+        //     "platform": "CHRIST (Deemed to be University)"
+        // },
         
     ],
     "skills": [
@@ -719,6 +719,7 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
 
 
 
