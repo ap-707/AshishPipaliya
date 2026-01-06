@@ -33,6 +33,22 @@ const data = {
             "platform": "Great Learning"
         },
         {
+            "name": "Introduction to Data Science",
+            "link": "", //"https://drive.google.com/file/d/11aPgN8H9W5nqKOeQjWFWroZCVEO9pBWO/view?usp=drivesdk",
+            "iframe": "", // "https://drive.google.com/uc?export=view&id=11aPgN8H9W5nqKOeQjWFWroZCVEO9pBWO",
+            "pnglink" : "11aPgN8H9W5nqKOeQjWFWroZCVEO9pBWO",
+            "platform_icon": "https://is2-ssl.mzstatic.com/image/thumb/Purple115/v4/54/17/94/54179444-aa7e-65b9-49f1-6517463659fe/source/512x512bb.jpg",
+            "platform": "Infosys Springboard"
+        },
+        {
+            "name": "Probability and Statistics using Python",
+            "link": "", // "https://drive.google.com/file/d/11cdfiURLISD8vQ9bc1dUZ_FCItDX9wos/view?usp=drivesdk",
+            "iframe": "", // "https://drive.google.com/file/d/11cdfiURLISD8vQ9bc1dUZ_FCItDX9wos/view?usp=sharing",
+            "pnglink" : "11cdfiURLISD8vQ9bc1dUZ_FCItDX9wos",
+            "platform_icon": "https://is2-ssl.mzstatic.com/image/thumb/Purple115/v4/54/17/94/54179444-aa7e-65b9-49f1-6517463659fe/source/512x512bb.jpg",
+            "platform": "Infosys Springboard"
+        },
+        {
             "name": "Python For Data Science",
             "link": "",
             "iframe": "https://courses.cognitiveclass.ai/certificates/993c983d36654b1086b2cbd9e2105d40",
@@ -49,21 +65,14 @@ const data = {
             "platform": "Great Learning"
         },
         {
-            "name": "Introduction to Data Science",
-            "link": "", //"https://drive.google.com/file/d/11aPgN8H9W5nqKOeQjWFWroZCVEO9pBWO/view?usp=drivesdk",
-            "iframe": "", // "https://drive.google.com/uc?export=view&id=11aPgN8H9W5nqKOeQjWFWroZCVEO9pBWO",
-            "pnglink" : "11aPgN8H9W5nqKOeQjWFWroZCVEO9pBWO",
-            "platform_icon": "https://is2-ssl.mzstatic.com/image/thumb/Purple115/v4/54/17/94/54179444-aa7e-65b9-49f1-6517463659fe/source/512x512bb.jpg",
-            "platform": "Infosys Springboard"
+            "name": "Master’s Graduate in Data Science",
+            "link": "https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/3393123/original/Ashish_Sureshbhai_Pipaliya20230924-73-1y628h9.jpg",
+            "iframe": "",
+            "pnglink" : "",
+            "platform_icon": "https://christuniversity.in/images/emblem_logo.png",
+            "platform": "Great Learning"
         },
-        {
-            "name": "Probability and Statistics using Python",
-            "link": "", // "https://drive.google.com/file/d/11cdfiURLISD8vQ9bc1dUZ_FCItDX9wos/view?usp=drivesdk",
-            "iframe": "", // "https://drive.google.com/file/d/11cdfiURLISD8vQ9bc1dUZ_FCItDX9wos/view?usp=sharing",
-            "pnglink" : "11cdfiURLISD8vQ9bc1dUZ_FCItDX9wos",
-            "platform_icon": "https://is2-ssl.mzstatic.com/image/thumb/Purple115/v4/54/17/94/54179444-aa7e-65b9-49f1-6517463659fe/source/512x512bb.jpg",
-            "platform": "Infosys Springboard"
-        },
+        
     ],
     "skills": [
         {
@@ -710,6 +719,7 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
 
 
 
