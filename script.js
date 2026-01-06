@@ -64,14 +64,14 @@ const data = {
             "platform_icon": "https://d1fdloi71mui9q.cloudfront.net/wpmuQ3EaRHeEFgOMOaJQ_convert.png",
             "platform": "Great Learning"
         },
-        {
-            "name": "Master’s Graduate in Data Science",
-            "link": "",
-            "iframe": "",
-            "pnglink" : "1r1UL_i32vfxI6EC8_E26fOjP8H6WPx0a",
-            "platform_icon": "https://christuniversity.in/images/emblem_logo.png",
-            "platform": "CHRIST (Deemed to be University)"
-        },
+        // {
+        //     "name": "Master’s Graduate in Data Science",
+        //     "link": "",
+        //     "iframe": "",
+        //     "pnglink" : "1r1UL_i32vfxI6EC8_E26fOjP8H6WPx0a",
+        //     "platform_icon": "https://christuniversity.in/images/emblem_logo.png",
+        //     "platform": "CHRIST (Deemed to be University)"
+        // },
         
     ],
     "skills": [
@@ -719,6 +719,7 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
 
 
 
