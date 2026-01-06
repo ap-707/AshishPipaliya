@@ -68,7 +68,7 @@ const data = {
             "name": "Master’s Graduate in Data Science",
             "link": "",
             "iframe": "",
-            "pnglink" : "",
+            "pnglink" : "1r1UL_i32vfxI6EC8_E26fOjP8H6WPx0a",
             "platform_icon": "https://christuniversity.in/images/emblem_logo.png",
             "platform": "CHRIST (Deemed to be University)"
         },
@@ -719,6 +719,7 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
 
 
 
