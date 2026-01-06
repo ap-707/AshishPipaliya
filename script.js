@@ -483,19 +483,19 @@ function openCertificateModal(certi) {
     if (certi.link) {
         modalContent.innerHTML = `
             <div class="w-full h-fit max-h-[90vh] rounded-md overflow-hidden">
-                <img src="${certi.link}" alt="Certificate" class="w-full h-fit rounded-md"/>
+                <img src="${certi.link}" draggable="false" alt="Certificate" class="w-full h-fit rounded-md"/>
             </div>
         `;
     } else if (certi.iframe) {
         modalContent.innerHTML = `
             <div class="w-full h-[90vh] max-h-[90vh] rounded-md overflow-hidden">
-                <iframe src="${certi.iframe}" class="w-full h-full rounded-md border-0"></iframe>
+                <iframe src="${certi.iframe}"draggable="false"  class="w-full h-full rounded-md border-0"></iframe>
             </div>
         `;
     } else if (certi.pnglink) {
         modalContent.innerHTML = `
             <div class="w-full h-[90vh] max-h-[90vh] rounded-md overflow-hidden">
-                <img src="https://lh3.googleusercontent.com/d/${certi.pnglink}" class="w-full h-full rounded-md border-0" alt="Certificate"></img>
+                <img src="https://lh3.googleusercontent.com/d/${certi.pnglink}" draggable="false" class="w-full h-full rounded-md border-0" alt="Certificate"></img>
             </div>
         `;
     }
@@ -719,6 +719,7 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
 
 
 
