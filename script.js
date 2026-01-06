@@ -46,15 +46,15 @@ const data = {
         },
         {
             "name": "Introduction to Data Science",
-            "link": "",
-            "iframe": "https://drive.google.com/uc?export=view&id=11aPgN8H9W5nqKOeQjWFWroZCVEO9pBWO",
+            "link": "https://drive.google.com/file/d/11aPgN8H9W5nqKOeQjWFWroZCVEO9pBWO/view?usp=drivesdk",
+            "iframe": "",
             "platform_icon": "https://is2-ssl.mzstatic.com/image/thumb/Purple115/v4/54/17/94/54179444-aa7e-65b9-49f1-6517463659fe/source/512x512bb.jpg",
             "platform": "Infosys Springboard"
         },
         {
             "name": "Probability and Statistics using Python",
-            "link": "",
-            "iframe": "https://drive.google.com/file/d/11cdfiURLISD8vQ9bc1dUZ_FCItDX9wos/view?usp=sharing",
+            "link": "https://drive.google.com/file/d/11cdfiURLISD8vQ9bc1dUZ_FCItDX9wos/view?usp=drivesdk",
+            "iframe": "",
             "platform_icon": "https://is2-ssl.mzstatic.com/image/thumb/Purple115/v4/54/17/94/54179444-aa7e-65b9-49f1-6517463659fe/source/512x512bb.jpg",
             "platform": "Infosys Springboard"
         },
@@ -697,6 +697,7 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
 
 
 
