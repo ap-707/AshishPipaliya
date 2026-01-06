@@ -617,10 +617,10 @@ function showProjectModal(project) {
         <div class="md:w-1/2 overflow-y-scroll max-h-[430px]">
             <div class="flex items-center mb-2">
                 <h2 class="text-2xl font-bold mr-2">${project.title} (${project.year})</h2>
-                <a href="${project.projectLink}" target="_blank">
-                    <img src="https://img.icons8.com/?size=100&id=FxJPExPJFHZ9&format=png" 
-                         alt="Link" class="skill-icon w-6 h-6" />
-                </a>
+                // <a href="${project.projectLink}" target="_blank">
+                //     <img src="https://img.icons8.com/?size=100&id=FxJPExPJFHZ9&format=png" 
+                //          alt="Link" class="skill-icon w-6 h-6" />
+                // </a>
             </div>
             <p class="mb-2 text-gray-700"><strong>Purpose:</strong><br/> ${project.purpose || "N/A"}</p>
             <p class="mb-2 text-gray-700"><strong>Technologies:</strong><br/> ${project.technologies || "N/A"}</p>
@@ -701,6 +701,7 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
 
 
 
