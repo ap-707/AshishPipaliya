@@ -64,14 +64,14 @@ const data = {
             "platform_icon": "https://d1fdloi71mui9q.cloudfront.net/wpmuQ3EaRHeEFgOMOaJQ_convert.png",
             "platform": "Great Learning"
         },
-        // {
-        //     "name": "Master’s Graduate in Data Science",
-        //     "link": "https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/3393123/original/Ashish_Sureshbhai_Pipaliya20230924-73-1y628h9.jpg",
-        //     "iframe": "",
-        //     "pnglink" : "",
-        //     "platform_icon": "https://christuniversity.in/images/emblem_logo.png",
-        //     "platform": "CHRIST (Deemed to be University)"
-        // },
+        {
+            "name": "Master’s Graduate in Data Science",
+            "link": "",
+            "iframe": "",
+            "pnglink" : "",
+            "platform_icon": "https://christuniversity.in/images/emblem_logo.png",
+            "platform": "CHRIST (Deemed to be University)"
+        },
         
     ],
     "skills": [
@@ -482,19 +482,19 @@ function openCertificateModal(certi) {
 
     if (certi.link) {
         modalContent.innerHTML = `
-            <div class="w-full h-fit max-h-[90vh] rounded-md overflow-hidden">
+            <div id="secure-box" class="w-full h-fit max-h-[90vh] rounded-md overflow-hidden">
                 <img src="${certi.link}" draggable="false" alt="Certificate" class="w-full h-fit rounded-md"/>
             </div>
         `;
     } else if (certi.iframe) {
         modalContent.innerHTML = `
-            <div class="w-full h-[90vh] max-h-[90vh] rounded-md overflow-hidden">
-                <iframe src="${certi.iframe}"draggable="false"  class="w-full h-full rounded-md border-0"></iframe>
+            <div id="secure-box" class="w-full h-[90vh] max-h-[90vh] rounded-md overflow-hidden">
+                <iframe src="${certi.iframe}" draggable="false"  class="w-full h-full rounded-md border-0"></iframe>
             </div>
         `;
     } else if (certi.pnglink) {
         modalContent.innerHTML = `
-            <div class="w-full h-[90vh] max-h-[90vh] rounded-md overflow-hidden">
+            <div id="secure-box" class="w-full h-[90vh] max-h-[90vh] rounded-md overflow-hidden">
                 <img src="https://lh3.googleusercontent.com/d/${certi.pnglink}" draggable="false" class="w-full h-full rounded-md border-0" alt="Certificate"></img>
             </div>
         `;
@@ -719,6 +719,7 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
 
 
 
