@@ -650,14 +650,14 @@ function showProjectModal(project) {
     modalContent.innerHTML = `
     <div class="flex flex-col md:flex-row gap-4">
         <!-- Left: Horizontal Scrollable Images -->
-        <div class="overflow-x-auto whitespace-nowrap md:w-1/2 max-h-[430px] flex items-center rounded-lg">
+        <div class="overflow-x-auto whitespace-nowrap md:w-1/2 max-h-[400px] flex items-center rounded-lg">
             ${project.main_image?.images?.map(img =>
-                `<img src="${img}" alt="${project.title}" class="inline-block h-full w-auto mr-2 object-contain" />`
+                `<img src="${img}" alt="${project.title}" class="inline-block max-h-[400px] mr-2 object-contain" />`
             ).join("") || ""}
         </div>  
 
         <!-- Right: Project Details -->
-        <div class="md:w-1/2 overflow-y-scroll max-h-[430px]">
+        <div class="md:w-1/2 overflow-y-scroll max-h-[500px]">
             <div class="flex items-center">
                 <h2 class="text-2xl font-bold mr-2">${project.title} (${project.year})</h2>
             </div>
@@ -740,5 +740,6 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
 
 
