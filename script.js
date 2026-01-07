@@ -406,41 +406,66 @@ function toggleDetails(index) {
 function generateCompanyExperienceHTML(companies) {
     return companies.map(company => {
         return `
-        <div class="experience-card bg-gray-50 shadow-md rounded-[50px] p-4 mb-6 cursor-pointer" onclick="toggleDetails(this)">
-
-            <!-- Top Row (Logo + Info + Arrow) -->
-            <div class="flex items-center justify-between space-x-6">
-            
-                <!-- Left: Logo + Company Info -->
-                <div class="flex items-center space-x-6">
-                    <div class="w-20 h-20 bg-white rounded-full overflow-hidden border border-gray-300 flex-shrink-0">
-                        <img src="${company.logo}" alt="${company.name} logo" class="w-full h-full object-contain p-2">
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900">
-                            <a href="${company.link}" class="hover:underline">${company.name}</a>  <span class="font-normal"> - ${company.location}</span>
-                        </h3>
-                        <p class="text-md text-gray-600 font-medium">${company.role} - ${company.type}</p>
-                        <p class="text-sm text-gray-500">${company.start} - ${company.end}</p>
-                    </div>
+        <div class="experience-card bg-gray-50 shadow-md rounded-[40px] p-4 mb-6 cursor-pointer" onclick="toggleDetails(this)" >
+      
+        <!-- Top Row -->
+        <div class="flex items-center justify-between gap-4">
+      
+            <!-- Left: Logo + Info -->
+            <div class="flex items-center gap-4">
+                <div class="w-20 h-20 bg-white rounded-full overflow-hidden border border-gray-300 flex-shrink-0">
+                <img src="${company.logo}"  alt="${company.name} logo" class="w-full h-full object-contain p-2">
                 </div>
-
-                <!-- Right: Toggle Arrow -->
-                <button class="doropdown_arrow min-h-10 max-h-10 min-w-10 max-w-10 transform transition-transform duration-300 ease-in-out">
-                    <img src="https://img.icons8.com/?size=50&id=2760&format=png"
-                        alt="See Details"
-                        class="w-10 h-10 object-contain p-2 cursor-pointer" />
-                </button>
+        
+                <div>
+                <h3 class="font-bold text-gray-900 text-base sm:text-lg">
+                    <a href="${company.link}" class="hover:underline"> ${company.name} </a> <span class="font-normal text-gray-600 text-sm"> – ${company.location} </span>
+                </h3>
+                <p class="text-sm sm:text-base text-gray-600 font-medium"> ${company.role} – ${company.type} </p>
+                <p class="text-sm sm:text-base text-gray-500"> ${company.start} – ${company.end} </p>
+                </div>
             </div>
-
-            <!-- Animated Expandable Section -->
-            <div class="company-details">
-                ${company.about ? `<p class="text-sm text-gray-700 mt-4 px-1 py-1"><strong>About Company:</strong><br/>${company.about}</p>` : ''}
-                ${company.responsibility ? `<p class="text-sm text-gray-700 mt-2 px-1 pb-1"><strong>My Responsibility in ${company.name}:</strong><br/>${company.responsibility}</p>` : ''}
-                ${company.contribution ? `<p class="text-sm text-gray-700 mt-2 px-1 pb-1"><strong>What Is My Contribution To This Company?</strong><br/>${company.contribution}</p>` : ''}
-                ${company.impact ? `<p class="text-sm text-gray-700 mt-2 px-1 pb-1"><strong>Impact:</strong><br/>${company.impact}</p>` : ''}
-            </div>
+      
+            <!-- Right: Arrow -->
+            <button class="doropdown_arrow w-10 h-10 flex items-center justify-center transform transition-transform duration-300 ease-in-out" type="button" >
+                <img src="https://img.icons8.com/?size=50&id=2760&format=png" alt="Toggle Details" class="w-6 h-6 object-contain" />
+            </button>
+      
         </div>
+      
+        <!-- Expandable Details -->
+        <div class="company-details overflow-hidden max-h-0 transition-all duration-300 ease-in-out" >
+      
+          <div class="mt-5 pt-4 border-t border-gray-200 bg-gray-50 rounded-xl px-3 pb-4"> 
+            ${company.about ? ` 
+            <div class="mb-4"> 
+              <h4 class="text-sm font-semibold text-gray-800 mb-1">About Company</h4>
+              <p class="text-sm text-gray-600 leading-relaxed"> ${company.about} </p>
+            </div>` : ''}
+      
+            ${company.responsibility ? `
+            <div class="mb-4">
+              <h4 class="text-sm font-semibold text-gray-800 mb-1">My Responsibilities</h4>
+              <p class="text-sm text-gray-600 leading-relaxed"> ${company.responsibility} </p>
+            </div>` : ''}
+      
+            ${company.contribution ? `
+            <div class="mb-4">
+              <h4 class="text-sm font-semibold text-gray-800 mb-1">My Contribution</h4>
+              <p class="text-sm text-gray-600 leading-relaxed"> ${company.contribution} </p>
+            </div>` : ''}
+      
+            ${company.impact ? `
+            <div>
+              <h4 class="text-sm font-semibold text-gray-800 mb-1">Impact</h4>
+              <p class="text-sm text-gray-600 leading-relaxed"> ${company.impact} </p>
+            </div>` : ''}
+      
+          </div>
+        </div>
+      
+      </div>
+      
         `;
     }).join("");
 }
@@ -580,9 +605,9 @@ function generateSkillsHTML(skills) {
     return skills.map(skill => {
         return skill.items.map(item => {
             return `
-                <div class="skill-card p-4 flex items-center space-x-3" data-category="${skill.category}">
-                <img src="${item.icon}" alt="${item.name}" class="skill-icon">
-                <p class="text-sm font-semibold text-gray-800">${item.name}</p>
+                <div class="skill-card p-2 sm:p-4 flex items-center gap-2 sm:gap-3 transition-none sm:transition-all sm:hover:scale-105 sm:hover:shadow-lg" data-category="${skill.category}">
+                    <img src="${item.icon}" alt="${item.name}" class="skill-icon w-6 h-6 sm:w-8 sm:h-8">
+                    <p class="text-xs sm:text-sm font-semibold text-gray-800">${item.name}</p>
                 </div>
             `;
         }).join("");
