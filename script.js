@@ -109,7 +109,7 @@ const data = {
                 { "name": "Tableau", "icon": "https://img.icons8.com/ios-filled/48/000000/tableau-software.png" },
                 { "name": "MS Office", "icon": "https://img.icons8.com/?size=100&id=117062&format=png&color=1A1A1A" },
                 { "name": "Looker Studio", "icon": "https://img.icons8.com/ios-filled/48/000000/dashboard.png" },
-                { "name": "Power Automate", "icon": "https://static-00.iconduck.com/assets.00/power-automate-icon-144x119-0z97x2m7.png" },
+                { "name": "Power Automate", "icon": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/PowerAutomate.png" },
                 { "name": "Google Analytics", "icon": "https://img.icons8.com/?size=128&id=ZSt7LSFvNpZG&format=png" },
                 { "name": "Google BigQuery", "icon": "https://img.icons8.com/ios-filled/48/000000/database.png" }
             ]
@@ -746,3 +746,4 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
