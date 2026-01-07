@@ -83,13 +83,9 @@ const data = {
                 { "name": "Python", "icon": "https://img.icons8.com/ios-filled/48/000000/python.png" },
                 { "name": "SQL", "icon": "https://img.icons8.com/ios-filled/48/000000/sql.png" },
                 { "name": "Java", "icon": "https://img.icons8.com/ios-filled/48/000000/java-coffee-cup-logo.png" },
-                { "name": "C", "icon": "https://img.icons8.com/?size=100&id=66724&format=png&color=1A1A1A" },
-                { "name": "C++", "icon": "https://img.icons8.com/ios-filled/48/000000/c-plus-plus-logo.png" },
-                { "name": "React Native", "icon": "https://img.icons8.com/ios-filled/48/000000/react-native.png" },
                 { "name": "HTML", "icon": "https://img.icons8.com/ios-filled/48/000000/html-5.png" },
                 { "name": "CSS", "icon": "https://img.icons8.com/ios-filled/48/000000/css3.png" },
-                { "name": "JavaScript", "icon": "https://img.icons8.com/ios-filled/48/000000/javascript.png" },
-                { "name": "PHP", "icon": "https://img.icons8.com/ios-filled/48/000000/php.png" }
+                { "name": "JavaScript", "icon": "https://img.icons8.com/ios-filled/48/000000/javascript.png" }
             ]
         },
         {
@@ -98,15 +94,13 @@ const data = {
                 { "name": "Data Pre-Processing", "icon": "https://img.icons8.com/ios-filled/48/000000/data-configuration.png" },
                 { "name": "Deep Learning", "icon": "https://img.icons8.com/?size=64&id=u5cBN2YgFqn5&format=png&color=1A1A1A" },
                 { "name": "NLP", "icon": "https://img.icons8.com/ios-filled/48/000000/speech-bubble.png" },
-                { "name": "Computer Vision", "icon": "https://img.icons8.com/?size=48&id=YNoETM4GGoUU&format=png&color=1A1A1A" },
-                { "name": "Statistics", "icon": "https://img.icons8.com/ios-filled/48/000000/statistics.png" }
+                { "name": "Computer Vision", "icon": "https://img.icons8.com/?size=48&id=YNoETM4GGoUU&format=png&color=1A1A1A" }
             ]
         },
         {
             "category": "tools",
             "items": [
                 { "name": "Power BI", "icon": "https://img.icons8.com/?size=100&id=QMTbsd0FVhHS&format=png&color=1A1A1A" },
-                { "name": "Tableau", "icon": "https://img.icons8.com/ios-filled/48/000000/tableau-software.png" },
                 { "name": "MS Office", "icon": "https://img.icons8.com/?size=100&id=117062&format=png&color=1A1A1A" },
                 { "name": "Looker Studio", "icon": "https://img.icons8.com/ios-filled/48/000000/dashboard.png" },
                 { "name": "Power Automate", "icon": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/PowerAutomate.png" },
@@ -746,4 +740,5 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
 
