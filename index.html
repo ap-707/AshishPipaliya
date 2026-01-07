@@ -10,9 +10,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@500;700&display=swap"
         rel="stylesheet">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="https://ap-707.github.io/AshishPipaliya/style.css">
+    <!-- <link rel="stylesheet" href="https://ap-707.github.io/AshishPipaliya/style.css"> -->
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M3P9L931NE"></script>
@@ -28,12 +28,12 @@
 <body class="bg-gray-50 text-gray-800 scroll-smooth">
     <!-- Navigation -->
     <nav class="bg-white shadow-lg fixed w-full z-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="w-full max-w-full sm:max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
-                <div class="flex items-center">
+                <div class="hidden sm:flex sm:flex-wrap sm:items-center sm:content-center">
                     <h1 class="text-2xl font-bold text-blue-600 font-poppins">Ashish Pipaliya</h1>
                 </div>
-                <div class="flex items-center space-x-6">
+                <div class="flex items-center justify-between sm:gap-6">
                     <a href="#home"
                         class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
                     <a href="#about"
@@ -81,7 +81,7 @@
     <!-- About Section -->
     <section id="about" class="py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-justify">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center font-poppins">About Me</h2>
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-12 text-center font-poppins">About Me</h2>
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-2/3" style="width: 100%;">
                     <p class="text-lg text-gray-700 leading-relaxed">
@@ -89,25 +89,24 @@
                         <span id="experience_duration"></span> 
                         of experience in transforming raw data into actionable insights. Proficient in Python, SQL, Power BI, and Google Analytics, with a strong foundation in data preprocessing, automation, and predictive modelling.Experienced in building dynamic dashboards, optimising pricing strategies, and conducting market research and policy research using advanced analytics, NLP, and machine learning techniques. Passionate about leveraging data to support strategic decisions and improve operational efficiency.
                     </p>
-                    <a href="#projects" class="mt-6 inline-block text-blue-600 font-semibold hover:underline">Explore My
-                        Work</a>
+                    <!-- <a href="#projects" class="text-xl sm:text-lg mt-6 inline-block text-blue-600 font-semibold hover:underline">Explore My Work</a> -->
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Experience Section -->
-    <section id="experience" class="py-10 bg-white">
+    <section id="experience" class="pb-10 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center font-poppins">My Experience</h2>
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-12 text-center font-poppins">My Experience</h2>
         </div>
     </section>
     
     <!-- Certificate Section NEW -->
 
-    <section id="certificate" class="py-10 bg-white">
+    <section id="certificate" class="pb-10 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center font-poppins">Certifications</h2>
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-12 text-center font-poppins">Certifications</h2>
 
             <!-- Certificate Image Modal -->
             <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-60">
@@ -138,25 +137,25 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-10 bg-white">
+    <section id="skills" class="pb-10 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center font-poppins">My Expertise</h2>
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-12 text-center font-poppins">My Expertise</h2>
             <!-- Skill Filter -->
-            <div class="flex justify-center mb-8 space-x-4">
+            <div class="w-full flex flex-wrap justify-center gap-3 mb-8 px-2">
                 <button
-                    class="filter-btn bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition"
+                    class="filter-btn  bg-blue-600 text-white  px-3 py-1.5 text-xs  sm:px-4 sm:py-2 sm:text-sm  rounded-full font-semibold  hover:bg-blue-700 transition whitespace-nowrap"
                     data-filter="all">All</button>
                 <button
-                    class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-semibold hover:bg-gray-300 transition"
+                    class="filter-btn  bg-blue-600 text-white  px-3 py-1.5 text-xs  sm:px-4 sm:py-2 sm:text-sm  rounded-full font-semibold  hover:bg-blue-700 transition whitespace-nowrap"
                     data-filter="programming">Programming</button>
                 <button
-                    class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-semibold hover:bg-gray-300 transition"
+                    class="filter-btn  bg-blue-600 text-white  px-3 py-1.5 text-xs  sm:px-4 sm:py-2 sm:text-sm  rounded-full font-semibold  hover:bg-blue-700 transition whitespace-nowrap"
                     data-filter="machine-learning">Machine Learning</button>
                 <button
-                    class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-semibold hover:bg-gray-300 transition"
+                    class="filter-btn  bg-blue-600 text-white  px-3 py-1.5 text-xs  sm:px-4 sm:py-2 sm:text-sm  rounded-full font-semibold  hover:bg-blue-700 transition whitespace-nowrap"
                     data-filter="tools">Tools</button>
                 <button
-                    class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-semibold hover:bg-gray-300 transition"
+                    class="filter-btn  bg-blue-600 text-white  px-3 py-1.5 text-xs  sm:px-4 sm:py-2 sm:text-sm  rounded-full font-semibold  hover:bg-blue-700 transition whitespace-nowrap"
                     data-filter="soft-skills">Soft Skills</button>
             </div>
             <!-- Skill Grid -->
@@ -167,22 +166,22 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-10">
+    <section id="projects" class="pb-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center font-poppins">Projects</h2>
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-12 text-center font-poppins">Projects</h2>
             <!-- Project Filter -->
             <div class="flex justify-center mb-8 space-x-4">
                 <button
-                    class="filter-btn bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition"
+                    class="filter-btn  bg-blue-600 text-white  px-3 py-1.5 text-xs  sm:px-4 sm:py-2 sm:text-sm  rounded-full font-semibold  hover:bg-blue-700 transition whitespace-nowrap"
                     data-filter="all">All</button>
                 <button
-                    class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-semibold hover:bg-gray-300 transition"
+                    class="filter-btn  bg-blue-600 text-white  px-3 py-1.5 text-xs  sm:px-4 sm:py-2 sm:text-sm  rounded-full font-semibold  hover:bg-blue-700 transition whitespace-nowrap"
                     data-filter="mobile">Mobile</button>
                 <button
-                    class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-semibold hover:bg-gray-300 transition"
+                    class="filter-btn  bg-blue-600 text-white  px-3 py-1.5 text-xs  sm:px-4 sm:py-2 sm:text-sm  rounded-full font-semibold  hover:bg-blue-700 transition whitespace-nowrap"
                     data-filter="data">Data Analysis</button>
                 <button
-                    class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-semibold hover:bg-gray-300 transition"
+                    class="filter-btn  bg-blue-600 text-white  px-3 py-1.5 text-xs  sm:px-4 sm:py-2 sm:text-sm  rounded-full font-semibold  hover:bg-blue-700 transition whitespace-nowrap"
                     data-filter="automation">Automation</button>
             </div>
             <div class="project-grid">
@@ -243,8 +242,8 @@
     </footer>
 
 
-    <script src="https://ap-707.github.io/AshishPipaliya/script.js"></script>
-    <!-- <script src="script.js"></script> -->
+    <!-- <script src="https://ap-707.github.io/AshishPipaliya/script.js"></script> -->
+    <script src="script.js"></script>
 
 </body>
 
