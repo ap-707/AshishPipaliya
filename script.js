@@ -652,7 +652,7 @@ function showProjectModal(project) {
         <!-- Left: Horizontal Scrollable Images -->
         <div class="overflow-x-auto whitespace-nowrap md:w-1/2 max-h-[400px] flex items-center rounded-lg">
             ${project.main_image?.images?.map(img =>
-                `<img src="${img}" alt="${project.title}" class="inline-block max-h-[400px] mr-2 object-contain" />`
+                `<img src="${img}" alt="${project.title}" class="inline-block max-h-[400px] object-contain" />`
             ).join("") || ""}
         </div>  
 
@@ -740,6 +740,7 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
 
 
 
