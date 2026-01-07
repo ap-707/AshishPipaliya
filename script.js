@@ -264,7 +264,7 @@ const data = {
             "about": "<strong>Harekrishna Exports Pvt. Ltd. (HK)</strong> is a Surat­-based, family‑run jewellery & diamond manufacturing and exporting company. Producing over 500,000 carats annually and serving 80+ countries, HK is celebrated for its vertically integrated, fair‑pricing model and state‑of‑the‑art solar‑powered facilities .",
             "responsibility": "Control Production & Sales, Inventory & Sales analysis, Dashboards and PowerBI reports,Automation and Process Analysis.",
             "contribution": "Worked on multiple self-initiated data science, automation, and AI/ML-based projects under personal branding. Developed tools and solutions that have been deployed in academic, professional, and personal environments.",
-            "impact": ""
+            "impact": "Drove data-driven decision-making across production, sales, and inventory through interactive Power BI dashboards and advanced analytical models. Improved operational efficiency by optimising inventory planning, automating reporting workflows, and enhancing data accuracy. Delivered actionable insights to management and cross-functional teams while independently developing innovative data science and AI/ML solutions aligned with real-world business needs."
         },
         {
             "name": "K. Girdharlal International Pvt. Ltd.",
@@ -434,10 +434,10 @@ function generateCompanyExperienceHTML(companies) {
             </div>
 
             <!-- Animated Expandable Section -->
-            <div class="company-details pl-[99px]">
-                ${company.about ? `<p class="text-sm text-gray-700 mt-4 px-1 py-1"><strong>About:</strong><br/>${company.about}</p>` : ''}
-                ${company.responsibility ? `<p class="text-sm text-gray-700 mt-2 px-1 pb-1"><strong>Responsibility:</strong><br/>${company.responsibility}</p>` : ''}
-                ${company.contribution ? `<p class="text-sm text-gray-700 mt-2 px-1 pb-1"><strong>Contribution:</strong><br/>${company.contribution}</p>` : ''}
+            <div class="company-details">
+                ${company.about ? `<p class="text-sm text-gray-700 mt-4 px-1 py-1"><strong>About Company:</strong><br/>${company.about}</p>` : ''}
+                ${company.responsibility ? `<p class="text-sm text-gray-700 mt-2 px-1 pb-1"><strong>My Responsibility in ${company.name}:</strong><br/>${company.responsibility}</p>` : ''}
+                ${company.contribution ? `<p class="text-sm text-gray-700 mt-2 px-1 pb-1"><strong>What Is My Contribution To This Company?</strong><br/>${company.contribution}</p>` : ''}
                 ${company.impact ? `<p class="text-sm text-gray-700 mt-2 px-1 pb-1"><strong>Impact:</strong><br/>${company.impact}</p>` : ''}
             </div>
         </div>
@@ -483,8 +483,8 @@ function openCertificateModal(certi) {
     modalContent.innerHTML = '';
 
     if (certi.link) {
-        modalContent.innerHTML = `
-            <div id="secure-box" class="w-full h-fit max-h-[90vh] rounded-md overflow-hidden">
+        modalContent.innerHTML = 
+           `<div id="secure-box" class="w-full h-fit max-h-[90vh] rounded-md overflow-hidden">
                 <img src="${certi.link}" draggable="false" alt="Certificate" class="w-full h-fit rounded-md"/>
             </div>
         `;
@@ -496,8 +496,8 @@ function openCertificateModal(certi) {
         `;
     } else if (certi.pnglink) {
         modalContent.innerHTML = `
-            <div id="secure-box" class="w-full h-[90vh] max-h-[90vh] rounded-md overflow-hidden">
-                <img src="https://lh3.googleusercontent.com/d/${certi.pnglink}" draggable="false" class="w-full h-full rounded-md border-0" alt="Certificate"></img>
+            <div id="secure-box" class="w-full h-fit max-h-[90vh] rounded-md overflow-hidden">
+                <img src="https://lh3.googleusercontent.com/d/${certi.pnglink}" draggable="false" alt="Certificate" class="w-full rounded-md"/>
             </div>
         `;
     }
@@ -721,18 +721,3 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
