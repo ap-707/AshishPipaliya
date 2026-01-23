@@ -232,6 +232,8 @@ const data = {
                     "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Company sales.png",
                     "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Inventory vs sale.png",
                     "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI//Monthly performance.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/AvgBackAndAmountPerc.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Inv_Sale_Trend.png",
                 ]
             },
             "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Company sales.png",
@@ -740,6 +742,7 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
 
 
 
