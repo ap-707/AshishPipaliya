@@ -234,9 +234,9 @@ const data = {
                     "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI//Monthly performance.png",
                     "https://ap-707.github.io/AshishPipaliya/ProjectImgs/AvgBackAndAmountPerc.png",
                     "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Inv_Sale_Trend.png",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Production_Imp_Exp.png",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Criticle_criteria_1.png",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Criticle_criteria_2.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Production_Imp_Exp.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Criticle_criteria_1.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Criticle_criteria_2.png",
                 ]
             },
             "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Company sales.png",
@@ -745,6 +745,7 @@ window.addEventListener('load', () => {
         gsap.set(card, { opacity: 1, y: 0 });
     });
 });
+
 
 
 
