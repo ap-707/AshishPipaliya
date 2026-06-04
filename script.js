@@ -241,7 +241,7 @@ const data = {
                     "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Criticle_criteria_2.png",
                 ]
             },
-            "image": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Company sales.png",
+            "image":"https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Sales Level Dashboard.jpg",
             "projectLink": "",
             "MediaLink": "",
             "title": "PowerBI Dashboard",
