@@ -229,6 +229,8 @@ const data = {
         {
             "main_image": {
                 "images": [
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Sales Level Dashboard.jpg",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Inventory and PnL.jpg",
                     "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Company sales.png",
                     "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Inventory vs sale.png",
                     "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI//Monthly performance.png",
