@@ -124,6 +124,33 @@ const data = {
         {
             "main_image": {
                 "images": [
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Display Antique Diamond1.jpg",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Display Antique Diamond2.jpg",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Sales Level Dashboard.jpg",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Inventory and PnL.jpg",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Company sales.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Inventory vs sale.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI//Monthly performance.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/AvgBackAndAmountPerc.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Inv_Sale_Trend.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Production_Imp_Exp.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Criticle_criteria_1.png",
+                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Criticle_criteria_2.png",
+                ]
+            },
+            "image":"https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Sales Level Dashboard.jpg",
+            "projectLink": "",
+            "MediaLink": "",
+            "title": "PowerBI Dashboard",
+            "year": '2023-2024',
+            "category": "data",
+            "purpose": "Inventory Management, Sales Tracking and Production Control, Monthly Performance & Evaluation",
+            "technologies": "PowerBI , SQL, Python",
+            "description": "</br>This Business Intelligence suite provides a comprehensive view of <b>sales, inventory, pricing, market trends, company performance, and target achievement</b>. By combining real-time analytics, trend monitoring, inventory optimization, and performance tracking, these dashboards enable data-driven decision-making, improve <b>operational efficiency, support production planning, and help maximize profitability</b>."
+        },
+        {
+            "main_image": {
+                "images": [
                     "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Diamond-price-prediction.jpg"
                 ]
             },
@@ -225,33 +252,6 @@ const data = {
             "purpose": "Mobile app to address local community issues.",
             "technologies": "React Native, PHP, MySQL, Java",
             "description": "A React Native app enabling users to report community problems efficiently, with PHP and MySQL for seamless data management."
-        },
-        {
-            "main_image": {
-                "images": [
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Display Antique Diamond1.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Display Antique Diamond2.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Sales Level Dashboard.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Inventory and PnL.jpg",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Company sales.png",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Inventory vs sale.png",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI//Monthly performance.png",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/AvgBackAndAmountPerc.png",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Inv_Sale_Trend.png",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Production_Imp_Exp.png",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Criticle_criteria_1.png",
-                    "https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Criticle_criteria_2.png",
-                ]
-            },
-            "image":"https://ap-707.github.io/AshishPipaliya/ProjectImgs/POWERBI/Sales Level Dashboard.jpg",
-            "projectLink": "",
-            "MediaLink": "",
-            "title": "PowerBI Dashboard",
-            "year": '2023-2024',
-            "category": "data",
-            "purpose": "Inventory Management, Sales Tracking and Production Control, Monthly Performance & Evaluation",
-            "technologies": "PowerBI , SQL, Python",
-            "description": "</br>This Business Intelligence suite provides a comprehensive view of <b>sales, inventory, pricing, market trends, company performance, and target achievement</b>. By combining real-time analytics, trend monitoring, inventory optimization, and performance tracking, these dashboards enable data-driven decision-making, improve <b>operational efficiency, support production planning, and help maximize profitability</b>."
         }
     ],
     "companies": [
