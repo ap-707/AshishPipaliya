@@ -31,7 +31,7 @@ const data = {
             "link": "https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/849842/original/Ashish_Sureshbhai_Pipaliya20220308-18489-1c1sflr.jpg",
             "iframe": "",
             "pnglink" : "",
-            "platform_icon": "https://d1fdloi71mui9q.cloudfront.net/wpmuQ3EaRHeEFgOMOaJQ_convert.png",
+            "platform_icon": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Greatlearning.jpg",
             "platform": "Great Learning"
         },
         {
@@ -55,7 +55,7 @@ const data = {
             "link": "",
             "iframe": "https://courses.cognitiveclass.ai/certificates/993c983d36654b1086b2cbd9e2105d40",
             "pnglink" : "",
-            "platform_icon": "https://sn-portals-cognitiveclass.s3.us-south.cloud-object-storage.appdomain.cloud/644bcxng43h754iyqftkagb7aen1",
+            "platform_icon": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Cognitive classes.jpg",
             "platform": "Cognitiveclass"
         },
         {
@@ -63,7 +63,7 @@ const data = {
             "link": "https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/3393123/original/Ashish_Sureshbhai_Pipaliya20230924-73-1y628h9.jpg",
             "iframe": "",
             "pnglink" : "",
-            "platform_icon": "https://d1fdloi71mui9q.cloudfront.net/wpmuQ3EaRHeEFgOMOaJQ_convert.png",
+            "platform_icon": "https://ap-707.github.io/AshishPipaliya/ProjectImgs/Greatlearning.jpg",
             "platform": "Great Learning"
         },
         // {
